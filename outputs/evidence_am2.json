@@ -1,0 +1,547 @@
+{
+  "target_model": "SUN-5K-G06P3",
+  "source_id": "am2",
+  "page": 2,
+  "columns": [
+    "SUN-4K-G06P3",
+    "SUN-5K-G06P3",
+    "SUN-6K-G06P3",
+    "SUN-7K-G06P3",
+    "SUN-8K-G06P3",
+    "SUN-10K-G06P3",
+    "SUN-12K-G06P3",
+    "SUN-15K-G06P3"
+  ],
+  "notes": [
+    "merged cells in row: 'Max. Operating PV Input Current (A)'",
+    "merged cells in row: 'Max. Input Short Circuit Current (A)'",
+    "merged cells in row: 'No. of MPP Trackers/'",
+    "merged cells in row: 'Rated Output Grid Frequency/Range(Hz)'",
+    "merged cells in row: 'Max. Efficiency'",
+    "merged cells in row: 'Euro Efficiency'",
+    "label overlap detected: 'GWeenigehrat l( kDga)ta'",
+    "merged cells in row: 'Permissible Ambient Humidity'"
+  ],
+  "evidence": [
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "Max. PV Input Power (kW)",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "6.5",
+      "confidence": "high",
+      "is_merged": false,
+      "notes": ""
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "Max. PV Input Voltage (V)",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "1100",
+      "confidence": "high",
+      "is_merged": true,
+      "notes": "shared across all model columns"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "Start-up Voltage (V)",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "140",
+      "confidence": "high",
+      "is_merged": true,
+      "notes": "shared across all model columns"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "MPPT Voltage Range (V)",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "120-1000",
+      "confidence": "high",
+      "is_merged": true,
+      "notes": "shared across all model columns"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "Rated PV Input Voltage (V)",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "600",
+      "confidence": "high",
+      "is_merged": true,
+      "notes": "shared across all model columns"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "Max. Operating PV Input Current (A)",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "13+13",
+      "confidence": "low",
+      "is_merged": true,
+      "notes": "merged cell covers: SUN-4K-G06P3, SUN-5K-G06P3, SUN-6K-G06P3, SUN-7K-G06P3, SUN-8K-G06P3, SUN-10K-G06P3"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "Max. Input Short Circuit Current (A)",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "19.5+19.5",
+      "confidence": "low",
+      "is_merged": true,
+      "notes": "merged cell covers: SUN-4K-G06P3, SUN-5K-G06P3, SUN-6K-G06P3, SUN-7K-G06P3, SUN-8K-G06P3, SUN-10K-G06P3"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "No. of MPP Trackers/",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "2/1+1",
+      "confidence": "low",
+      "is_merged": true,
+      "notes": "merged cell covers: SUN-4K-G06P3, SUN-5K-G06P3, SUN-6K-G06P3, SUN-7K-G06P3, SUN-8K-G06P3, SUN-10K-G06P3"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "AC Output Side",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "3",
+      "confidence": "high",
+      "is_merged": true,
+      "notes": "shared across all model columns"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "Rated AC Output Active Power (kW)",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "5",
+      "confidence": "high",
+      "is_merged": false,
+      "notes": ""
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "Max. AC Output Apparent Power (kVA)",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "5.5",
+      "confidence": "high",
+      "is_merged": false,
+      "notes": ""
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "Rated AC Output Current (A)",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "7.6/7.3",
+      "confidence": "high",
+      "is_merged": false,
+      "notes": ""
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "Max. AC Output Current (A)",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "8.4/8",
+      "confidence": "high",
+      "is_merged": false,
+      "notes": ""
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "Rated Output Voltage/Range (V)",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "220/380V, 230/400V 0.85Un-1.1Un",
+      "confidence": "high",
+      "is_merged": true,
+      "notes": "shared across all model columns"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "Grid Connection Form",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "3L/N/PE",
+      "confidence": "high",
+      "is_merged": true,
+      "notes": "shared across all model columns"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "Rated Output Grid Frequency/Range(Hz)",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "50/45-55,",
+      "confidence": "low",
+      "is_merged": true,
+      "notes": "merged cell covers: SUN-4K-G06P3, SUN-5K-G06P3, SUN-6K-G06P3, SUN-7K-G06P3"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "Power Factor Adjustment Range",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "0.8 leading to 0.8 lagging",
+      "confidence": "high",
+      "is_merged": true,
+      "notes": "shared across all model columns"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "Total Current Harmonic Distortion THDi",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "<3%",
+      "confidence": "high",
+      "is_merged": true,
+      "notes": "shared across all model columns"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "DC Injection Current",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "<0.5%ln",
+      "confidence": "high",
+      "is_merged": true,
+      "notes": "shared across all model columns"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "Max. Efficiency",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "98.2%",
+      "confidence": "low",
+      "is_merged": true,
+      "notes": "merged cell covers: SUN-5K-G06P3, SUN-6K-G06P3, SUN-7K-G06P3"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "Euro Efficiency",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "97.6%",
+      "confidence": "low",
+      "is_merged": true,
+      "notes": "merged cell covers: SUN-5K-G06P3, SUN-6K-G06P3, SUN-7K-G06P3"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "MPPT Efficiency",
+      "model": "SUN-5K-G06P3",
+      "raw_value": ">99%",
+      "confidence": "high",
+      "is_merged": true,
+      "notes": "shared across all model columns"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "DC Polarity Reverse Connection Protection",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "Yes",
+      "confidence": "high",
+      "is_merged": true,
+      "notes": "shared across all model columns"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "AC Output Overcurrent Protection",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "Yes",
+      "confidence": "high",
+      "is_merged": true,
+      "notes": "shared across all model columns"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "AC Output Overvoltage Protection",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "Yes",
+      "confidence": "high",
+      "is_merged": true,
+      "notes": "shared across all model columns"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "AC Output Short Circuit Protection",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "Yes",
+      "confidence": "high",
+      "is_merged": true,
+      "notes": "shared across all model columns"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "Thermal Protection",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "Yes",
+      "confidence": "high",
+      "is_merged": true,
+      "notes": "shared across all model columns"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "DC Terminal Insulation Impedance Monitoring",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "Yes",
+      "confidence": "high",
+      "is_merged": true,
+      "notes": "shared across all model columns"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "DC Component Monitoring",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "Yes",
+      "confidence": "high",
+      "is_merged": true,
+      "notes": "shared across all model columns"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "Ground Fault Current Monitoring",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "Yes",
+      "confidence": "high",
+      "is_merged": true,
+      "notes": "shared across all model columns"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "Power Network Monitoring",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "Yes",
+      "confidence": "high",
+      "is_merged": true,
+      "notes": "shared across all model columns"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "Island Protection Monitoring",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "Yes",
+      "confidence": "high",
+      "is_merged": true,
+      "notes": "shared across all model columns"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "Earth Fault Detection",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "Yes",
+      "confidence": "high",
+      "is_merged": true,
+      "notes": "shared across all model columns"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "Overvoltage Load Drop Protection",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "Yes",
+      "confidence": "high",
+      "is_merged": true,
+      "notes": "shared across all model columns"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "Residual Current (RCD) Detection",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "Yes",
+      "confidence": "high",
+      "is_merged": true,
+      "notes": "shared across all model columns"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "Surge Protection Level",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "TYPE II(DC), TYPE II(AC)",
+      "confidence": "high",
+      "is_merged": true,
+      "notes": "shared across all model columns"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "Communication Interface",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "RS485/RS232 /WiFi/LAN",
+      "confidence": "high",
+      "is_merged": true,
+      "notes": "shared across all model columns"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "GWeenigehrat l( kDga)ta",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "4.8",
+      "confidence": "low",
+      "is_merged": true,
+      "notes": "shared across all model columns; uncertain label (overlapping text)"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "Operating Temperature Range (°C)",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "-25 to +60 , >45 Derating",
+      "confidence": "high",
+      "is_merged": true,
+      "notes": "shared across all model columns"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "Permissible Ambient Humidity",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "℃ 0-100%",
+      "confidence": "low",
+      "is_merged": true,
+      "notes": "merged cell covers: SUN-4K-G06P3, SUN-5K-G06P3, SUN-6K-G06P3, SUN-7K-G06P3"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "Permissible Ambient Humidity",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "℃",
+      "confidence": "low",
+      "is_merged": true,
+      "notes": "merged cell covers: all columns"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "Permissible Altitude (m)",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "4000m",
+      "confidence": "high",
+      "is_merged": true,
+      "notes": "shared across all model columns"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "Noise (dB)",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "<45",
+      "confidence": "high",
+      "is_merged": true,
+      "notes": "shared across all model columns"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "Ingress Protection(IP) Rating",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "IP 65",
+      "confidence": "high",
+      "is_merged": true,
+      "notes": "shared across all model columns"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "Inverter Topology",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "Non-Isolated",
+      "confidence": "high",
+      "is_merged": true,
+      "notes": "shared across all model columns"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "Over Voltage Category",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "OVC II(DC), OVC III(AC)",
+      "confidence": "high",
+      "is_merged": true,
+      "notes": "shared across all model columns"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "Cabinet Size (WxHxD mm)",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "283×463×178 (Excluding Connectors and Brackets)",
+      "confidence": "high",
+      "is_merged": true,
+      "notes": "shared across all model columns"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "Weight (kg)",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "11",
+      "confidence": "high",
+      "is_merged": true,
+      "notes": "shared across all model columns"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "Warranty",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "5 Years",
+      "confidence": "high",
+      "is_merged": true,
+      "notes": "shared across all model columns"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "Type of Cooling",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "Natural Cooling",
+      "confidence": "high",
+      "is_merged": true,
+      "notes": "shared across all model columns"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "Grid Regulation",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "IEC 61727, IEC 62116, OVE-Richtlinie CEI 0-21, R25, EN 50549, G99, VDE-AR-N NRS 097, RD 4105 140, UNE 217002,",
+      "confidence": "high",
+      "is_merged": true,
+      "notes": "shared across all model columns"
+    },
+    {
+      "source_id": "am2",
+      "page": 2,
+      "raw_label": "Safety EMC/Standard",
+      "model": "SUN-5K-G06P3",
+      "raw_value": "IEC/EN 61000-6-1/2/3/4, IEC/EN 62109-1, IEC/EN 62109-2",
+      "confidence": "high",
+      "is_merged": true,
+      "notes": "shared across all model columns"
+    }
+  ]
+}
