@@ -69,7 +69,7 @@ def find_spec(label: str) -> FieldSpec | None:
 
 def map_evidence(evidence: list[EvidenceRecord], target_model: str) -> list[CanonicalValue]:
     out: list[CanonicalValue] = []
-    for ev in evidence:
+    for i, ev in enumerate(evidence):
         spec = find_spec(ev.raw_label)
         if spec is None:
             continue
@@ -80,6 +80,6 @@ def map_evidence(evidence: list[EvidenceRecord], target_model: str) -> list[Cano
         out.append(CanonicalValue(
             field=spec.field, source_id=ev.source_id, page=ev.page,
             raw=ev.raw_value, value=value, unit=spec.unit,
-            confidence=ev.confidence, notes=notes,
+            confidence=ev.confidence, notes=notes, evidence_index=i,
         ))
     return out

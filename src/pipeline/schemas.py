@@ -56,3 +56,28 @@ class CanonicalValue(BaseModel):
     unit: str = ""
     confidence: Confidence = Confidence.HIGH
     notes: str = ""
+    evidence_index: int | None = None 
+
+class Status(str, Enum):
+    AGREES = "agrees"
+    CONFLICT = "conflict"
+    SOURCE_1_ONLY = "source_1_only"
+    SOURCE_2_ONLY = "source_2_only"
+    UNCERTAIN = "uncertain"
+
+class SourceValue(BaseModel):
+    source_id: str
+    page: int
+    raw: str
+    value: object
+    unit: str = ""
+    confidence: Confidence = Confidence.HIGH
+    notes: str = ""
+
+class Comparison(BaseModel):
+    field: str
+    source_1: SourceValue | None = None
+    source_2: SourceValue | None = None
+    status: Status
+    confidence: Confidence = Confidence.HIGH
+    notes: str = ""
