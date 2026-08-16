@@ -93,18 +93,31 @@ def _compact(comparisons: list[Comparison]) -> list[dict]:
             else:
                 item[key] = {"value": sv.value, "unit": sv.unit}
         if c.notes:
-            item["notes"] = c.notes[:200]
+            item["notes"] = c.notes[:120]
         out.append(item)
     return out
 
 
 def _strip_thinking(text: str) -> str:
-    """Drop a reasoning-model thinking block (delimiter: a closing tag)."""
+    """Drop a reasoning-model thinking block (delimiter: a closing tag).
+
+    Cuts after the LAST closing marker so truncated reasoning (where the model
+    ran out of tokens mid-block) is removed too. If the text looks like a pure
+    thinking block with no closing marker, returns an empty string (nothing
+    usable survived).
+    """
     lines = text.splitlines()
+    markers = (" response", "</thinking>", "response")
+    last = -1
     for i, line in enumerate(lines):
         clean = "".join(ch for ch in line if ch.isprintable()).strip()
-        if clean in ("</think>", "</thinking>", "response"):
-            return "\n".join(lines[i + 1:]).strip()
+        if clean in markers:
+            last = i
+    if last >= 0:
+        return "\n".join(lines[last + 1:]).strip()
+    first = "".join(ch for ch in lines[0] if ch.isprintable()).strip() if lines else ""
+    if first.startswith(("thinking", "<thinking", " response", "response")):
+        return ""
     return text.strip()
 
 
@@ -117,7 +130,7 @@ def _llm_markdown(comparisons: list[Comparison], target_model: str,
         "2) Conflicts, 3) Present in one source only, "
         "4) Unclear / low confidence, 5) Recommended verification questions. "
         "Base every statement strictly on the provided data; never invent values. "
-        "Output only the markdown, no preamble."
+        "Do NOT include any thinking, reasoning, or explanation; output only the markdown report."
     )
     user = json.dumps({
         "target_model": target_model,
@@ -126,7 +139,7 @@ def _llm_markdown(comparisons: list[Comparison], target_model: str,
     }, ensure_ascii=False, indent=2)
     for attempt in range(2):
         resp = client.chat.completions.create(
-            model=os.environ.get("GROQ_MODEL", "qwen/qwen3.6-27b"),
+            model=os.environ.get("GROQ_MODEL", "llama-3.3-70b-versatile"),
             messages=[
                 {"role": "system", "content": system},
                 {"role": "user", "content": user},
@@ -141,7 +154,9 @@ def _llm_markdown(comparisons: list[Comparison], target_model: str,
             return md.strip() + "\n"
         if attempt == 0:
             time.sleep(3)
-    return md.strip() + "\n"
+    if not md:
+        raise RuntimeError("LLM report produced no usable content (truncated reasoning block)")
+    raise RuntimeError("LLM report incomplete after retries")
 
 
 def report(comparisons: list[Comparison], target_model: str,
@@ -163,7 +178,11 @@ def report(comparisons: list[Comparison], target_model: str,
         try:
             md = _llm_markdown(comparisons, target_model, source_labels, client)
         except Exception as exc:
-            md = f"> LLM report generation failed ({exc}); deterministic fallback below.\n\n"
+            err = str(exc)
+            reason = ("Groq rate limit / quota exceeded" if
+                      ("429" in err or "rate_limit" in err.lower()) else
+                      err[:120])
+            md = f"> Note: LLM report generation was unavailable ({reason}); deterministic report below.\n\n"
             md += _render_markdown(comparisons, target_model, source_labels)
     else:
         md = _render_markdown(comparisons, target_model, source_labels)

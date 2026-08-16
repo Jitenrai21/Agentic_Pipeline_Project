@@ -26,6 +26,8 @@ def _system_prompt(target_model: str) -> str:
         "- 'confidence' is one of: high, medium, low.\n"
         f"- Target model is {target_model}. A record may apply to it even when is_merged is true "
         "(the merged cell covers it).\n"
+        "- Respond with ONLY the JSON object. Do NOT include any thinking, "
+        "reasoning, explanation, or markdown code fences.\n"
     )
 
 
@@ -38,18 +40,19 @@ def _records_payload(evidence: list[EvidenceRecord], offset: int = 0) -> list[di
     ]
 
 
-def _call_llm(client, system: str, user: str, retries: int = 2) -> str:
+def _call_llm(client, system: str, user: str, retries: int = 2,
+              max_tokens: int = 4096) -> str:
     last: Exception | None = None
     for attempt in range(retries + 1):
         try:
             resp = client.chat.completions.create(
-                model=os.environ.get("GROQ_MODEL", "qwen/qwen3.6-27b"),
+                model=os.environ.get("GROQ_MODEL", "llama-3.3-70b-versatile"),
                 messages=[
                     {"role": "system", "content": system},
                     {"role": "user", "content": user},
                 ],
                 temperature=0,
-                max_tokens=4096,
+                max_tokens=max_tokens,
             )
             return resp.choices[0].message.content or ""
         except Exception as exc:
@@ -83,14 +86,22 @@ def _parse_assignments(text: str) -> list[dict]:
     raise AgentError("no valid JSON array of assignments found in LLM response")
 
 def interpret(evidence: list[EvidenceRecord], target_model: str,
-              client=None, chunk_size: int = 10, pause_s: float = 10.0,
-              retries: int = 2) -> list[CanonicalValue]:
+              client=None, chunk_size: int = 20, pause_s: float = 10.0,
+              retries: int = 2, max_tokens: int = 4600) -> list[CanonicalValue]:
     """Interpret evidence into canonical values.
 
     If GROQ_API_KEY is set, the LLM assigns fields + confidence (values are
     still typed deterministically by the normalizer). Evidence is sent in
     chunks to stay within the provider's token-per-minute limit. Otherwise the
     deterministic mapper is used as fallback.
+
+    Token budget: Groq free tier counts `input + max_tokens` per request
+    against both the per-minute (TPM, 8000) and per-day (TPD) limits. qwen3.6
+    is a reasoning model whose `<thinking>` block length varies run to run, so
+    a chunk can occasionally exceed `max_tokens` before the assignments JSON
+    appears. Each failing chunk is therefore re-prompted (retries) — thinking
+    length is stochastic, so a retry usually produces a shorter block — and if
+    it still fails the whole interpretation falls back to the mapper.
     """
     api_key = os.environ.get("GROQ_API_KEY")
     if not api_key:
@@ -105,11 +116,22 @@ def interpret(evidence: list[EvidenceRecord], target_model: str,
         assignments: list[dict] = []
         for start in range(0, len(evidence), chunk_size):
             chunk = evidence[start:start + chunk_size]
-            text = _call_llm(client, system,
-                             json.dumps(_records_payload(chunk, offset=start),
-                                        ensure_ascii=False),
-                             retries=retries)
-            assignments += _parse_assignments(text)
+            payload = json.dumps(_records_payload(chunk, offset=start),
+                                 ensure_ascii=False)
+            text = _call_llm(client, system, payload,
+                             retries=retries, max_tokens=max_tokens)
+            parsed: list[dict] = []
+            for attempt in range(retries + 1):
+                try:
+                    parsed = _parse_assignments(text)
+                    break
+                except AgentError:
+                    if attempt >= retries:
+                        raise
+                    time.sleep(2.0)
+                    text = _call_llm(client, system, payload,
+                                     retries=0, max_tokens=max_tokens)
+            assignments += parsed
             if start + chunk_size < len(evidence):
                 time.sleep(pause_s)
     except Exception as exc:
@@ -140,4 +162,12 @@ def interpret(evidence: list[EvidenceRecord], target_model: str,
             raw=ev.raw_value, value=value, unit=spec.unit,
             confidence=conf, notes=notes, evidence_index=i,
         ))
+
+    # Deterministic coverage floor: every (field, source) pair the rule-based
+    # mapper would have captured must be present in the output, even when the
+    # LLM skipped the record or reassigned it to another field. Otherwise a
+    # dropped record would silently turn an "agrees" into "source_1_only".
+    det = map_evidence(evidence, target_model)
+    covered = {(cv.field, cv.source_id) for cv in out}
+    out += [cv for cv in det if (cv.field, cv.source_id) not in covered]
     return out
