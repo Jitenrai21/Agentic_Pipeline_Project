@@ -46,3 +46,13 @@ class EvidenceRecord(BaseModel):
     confidence: Confidence
     is_merged: bool = False
     notes: str = ""
+
+class CanonicalValue(BaseModel):
+    field: str
+    source_id: str
+    page: int
+    raw: str
+    value: object
+    unit: str = ""
+    confidence: Confidence = Confidence.HIGH
+    notes: str = ""

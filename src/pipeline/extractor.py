@@ -100,8 +100,9 @@ def _assign_values(tokens, geo: TableGeometry):
         return {}, make(tokens[0], is_merged=True), []
 
     if any(any(ch.isalpha() for ch in w["text"]) for w in tokens):
-        return {}, make({"text": " ".join(w["text"] for w in tokens),
-                         "x0": tokens[0]["x0"], "x1": tokens[-1]["x1"]},
+        ordered = sorted(tokens, key=lambda w: (round(w["top"], 1), w["x0"]))
+        return {}, make({"text": " ".join(w["text"] for w in ordered),
+                         "x0": ordered[0]["x0"], "x1": ordered[-1]["x1"]},
                         is_merged=True), []
 
     per_col, seen = {}, set()
