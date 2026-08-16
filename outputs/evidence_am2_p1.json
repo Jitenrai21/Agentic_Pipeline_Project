@@ -414,7 +414,7 @@
       "page": 2,
       "raw_label": "Ingress Protection",
       "model": "SUN-5K-G06P3",
-      "raw_value": "℃ IP65 ℃",
+      "raw_value": "℃ ℃ IP65",
       "confidence": "high",
       "is_merged": true,
       "notes": "shared across all model columns"

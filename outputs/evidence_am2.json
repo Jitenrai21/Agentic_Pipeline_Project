@@ -528,7 +528,7 @@
       "page": 2,
       "raw_label": "Grid Regulation",
       "model": "SUN-5K-G06P3",
-      "raw_value": "IEC 61727, IEC 62116, OVE-Richtlinie CEI 0-21, R25, EN 50549, G99, VDE-AR-N NRS 097, RD 4105 140, UNE 217002,",
+      "raw_value": "IEC 61727, IEC 62116, CEI 0-21, EN 50549, NRS 097, RD 140, UNE 217002, OVE-Richtlinie R25, G99, VDE-AR-N 4105",
       "confidence": "high",
       "is_merged": true,
       "notes": "shared across all model columns"
