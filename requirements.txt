@@ -1,5 +1,0 @@
-pdfplumber
-pydantic>=2
-groq
-langgraph
-python-dotenv
