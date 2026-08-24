@@ -1,8 +1,14 @@
-import re
 from dataclasses import dataclass
 
 from .normalizer import normalize
 from .schemas import CanonicalValue, EvidenceRecord
+
+
+# Translation table: replace every non-alphanumeric with space
+_NORM_TABLE = str.maketrans(
+    {c: " " for c in range(256) if not chr(c).isalnum() and chr(c) not in " "}
+)
+
 
 @dataclass(frozen=True)
 class FieldSpec:
@@ -10,6 +16,7 @@ class FieldSpec:
     groups: tuple[tuple[str, ...], ...]
     value_type: str
     unit: str = ""
+
 
 FIELDS: list[FieldSpec] = [
     FieldSpec("rated_power_kw", (("rated", "output", "power"), ("rated", "ac", "output", "active", "power")), "float", "kW"),
@@ -49,23 +56,55 @@ FIELDS: list[FieldSpec] = [
     FieldSpec("safety_emc_standards", (("safety", "emc"), ("emc", "standard")), "standards", ""),
 ]
 
+
 def _norm_label(label: str) -> str:
-    return re.sub(r"[^a-z0-9]+", " ", label.lower()).strip()
+    return label.lower().translate(_NORM_TABLE).strip()
+
+
+def _word_boundary_match(text: str, keyword: str, start: int, end: int) -> bool:
+    """Check that text[start:end] is a whole word (spaces on both sides or at string boundary)."""
+    if start > 0 and text[start - 1] != " ":
+        return False
+    if end < len(text) and text[end] != " ":
+        return False
+    return True
+
+
+def _contains_keyword(text: str, keyword: str) -> bool:
+    """Check if keyword appears as a whole word in text, with optional trailing 's'."""
+    kw_plain = keyword
+    kw_plural = keyword + "s"
+    search_from = 0
+    while search_from <= len(text) - len(kw_plain):
+        idx = text.find(kw_plain, search_from)
+        if idx < 0:
+            break
+        end = idx + len(kw_plain)
+        # check for plural
+        if end < len(text) and text[end] == "s":
+            end += 1
+        if _word_boundary_match(text, keyword, idx, end):
+            return True
+        search_from = idx + 1
+    return False
+
 
 def _match(spec: FieldSpec, label: str) -> bool:
     norm = _norm_label(label)
     if not norm:
         return False
     for group in spec.groups:
-        if all(re.search(r"\b" + re.escape(kw) + r"s?\b", norm) for kw in group):
+        if all(_contains_keyword(norm, kw) for kw in group):
             return True
     return False
+
 
 def find_spec(label: str) -> FieldSpec | None:
     for spec in FIELDS:
         if _match(spec, label):
             return spec
     return None
+
 
 def map_evidence(evidence: list[EvidenceRecord], target_model: str) -> list[CanonicalValue]:
     out: list[CanonicalValue] = []

@@ -1,5 +1,3 @@
-import re
-
 from .mapper import find_spec
 from .schemas import CanonicalValue, Confidence, EvidenceRecord
 
@@ -11,10 +9,14 @@ def _covers(ev: EvidenceRecord, target: str) -> bool:
         return False
     if "shared across all model columns" in ev.notes:
         return True
-    m = re.search(r"merged cell covers: ([^;]+)", ev.notes)
-    if m:
-        return target in m.group(1)
-    return False
+    marker = "merged cell covers: "
+    idx = ev.notes.find(marker)
+    if idx < 0:
+        return False
+    start = idx + len(marker)
+    end = ev.notes.find(";", start)
+    covered = ev.notes[start:end] if end >= 0 else ev.notes[start:]
+    return target in covered
 
 
 def _cap(conf: Confidence, rank: int) -> Confidence:

@@ -1,4 +1,3 @@
-import re
 from collections import defaultdict
 
 from .mapper import FIELDS
@@ -10,6 +9,7 @@ _CONF_RANK = {Confidence.LOW: 0, Confidence.MEDIUM: 1, Confidence.HIGH: 2}
 
 def _norm_text(value: str) -> str:
     return " ".join(value.lower().split())
+
 
 def _values_equal(a, b) -> bool:
     if isinstance(a, (int, float)) and isinstance(b, (int, float)):
@@ -35,6 +35,7 @@ def _best(records: list[CanonicalValue]) -> tuple[CanonicalValue | None, str]:
         return best[0], "internal inconsistency: multiple conflicting values in the same source"
     return best[0], ""
 
+
 def _to_source_value(cv: CanonicalValue) -> SourceValue:
     return SourceValue(source_id=cv.source_id, page=cv.page, raw=cv.raw,
                        value=cv.value, unit=cv.unit,
@@ -56,6 +57,7 @@ def _compare(a, b) -> tuple[Status, str]:
 
     return Status.CONFLICT, ""
 
+
 def _compare_standards(a, b) -> tuple[Status, str]:
     sa, sb = set(a.value), set(b.value)
     if sa == sb:
@@ -72,10 +74,14 @@ def _covers_target(cv: CanonicalValue, target: str | None) -> bool:
         return False
     if "shared across all model columns" in cv.notes:
         return True
-    m = re.search(r"merged cell covers: ([^;]+)", cv.notes)
-    if m:
-        return target in m.group(1)
-    return False
+    marker = "merged cell covers: "
+    idx = cv.notes.find(marker)
+    if idx < 0:
+        return False
+    start = idx + len(marker)
+    end = cv.notes.find(";", start)
+    covered = cv.notes[start:end] if end >= 0 else cv.notes[start:]
+    return target in covered
 
 
 def reconcile(values: list[CanonicalValue],
