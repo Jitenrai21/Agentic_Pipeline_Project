@@ -1,4 +1,4 @@
-# Agentic Pipeline — Document Ingestion Layer
+# Agentic Pipeline
 
 An AI-powered document extraction pipeline for analyzing solar inverter datasheets and generating import review reports.
 
