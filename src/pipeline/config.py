@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import os
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -7,6 +8,20 @@ from dotenv import load_dotenv
 # Load .env from project root
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 load_dotenv(PROJECT_ROOT / ".env")
+
+
+# LLM Configuration
+def get_openrouter_api_key() -> str:
+    key = os.getenv("OPENROUTER_API_KEY")
+    if not key or key == "your_openrouter_api_key_here":
+        raise ValueError(
+            "OPENROUTER_API_KEY not set. Add it to .env file at project root."
+        )
+    return key
+
+
+OPENROUTER_MODEL = os.getenv("OPENROUTER_MODEL", "nvidia/nemotron-3.5-lightning:free")
+OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
 
 
 # Paths

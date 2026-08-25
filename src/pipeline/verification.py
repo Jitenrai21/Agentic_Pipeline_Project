@@ -91,7 +91,7 @@ def _token_similarity(a: str, b: str) -> float:
     return len(intersection) / len(union) if union else 0.0
 
 
-# ── Block matching ─────────────────────────────────────────────────
+# ── Block matching 
 
 def _match_blocks_by_text(
     blocks_a: list[EvidenceBlock],
