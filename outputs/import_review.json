@@ -1,0 +1,356 @@
+{
+  "metadata": {
+    "generated_at": "2026-08-25T22:31:43.057240",
+    "task": "task1_nepal",
+    "requested_model": "SUN-5K-G06P3",
+    "sources": {
+      "source_1": {
+        "variant": "AM2-P1",
+        "extracted_fields": 22
+      },
+      "source_2": {
+        "variant": "AM2",
+        "extracted_fields": 22
+      }
+    }
+  },
+  "summary": {
+    "total_fields": 28,
+    "agreements": 3,
+    "conflicts": 4,
+    "source_only": 14,
+    "missing": 7,
+    "llm_calls": 0
+  },
+  "checklist_coverage": {
+    "product_identity": {
+      "total": 13,
+      "extracted": 13,
+      "fields": [
+        "product.model",
+        "product.variant",
+        "product.rated_power",
+        "product.max_pv_input_power",
+        "product.max_pv_input_voltage",
+        "product.mppt_voltage_range",
+        "product.rated_output_power",
+        "product.rated_output_voltage",
+        "product.grid_frequency",
+        "product.max_efficiency",
+        "product.euro_efficiency",
+        "product.weight",
+        "product.ip_rating"
+      ]
+    },
+    "manufacturer_identity": {
+      "total": 3,
+      "extracted": 3,
+      "fields": [
+        "manufacturer.legal_name",
+        "manufacturer.factory_address",
+        "manufacturer.country"
+      ]
+    },
+    "test_evidence": {
+      "total": 2,
+      "extracted": 2,
+      "fields": [
+        "compliance.grid_standards",
+        "compliance.safety_emc_standards"
+      ]
+    },
+    "labeling": {
+      "total": 5,
+      "extracted": 0,
+      "fields": []
+    }
+  },
+  "fields": {
+    "product.model": {
+      "status": "missing",
+      "value_a": null,
+      "value_b": null,
+      "variant_a": null,
+      "variant_b": null,
+      "confidence": 1.0,
+      "notes": "Not found in either source"
+    },
+    "product.variant": {
+      "status": "missing",
+      "value_a": null,
+      "value_b": null,
+      "variant_a": null,
+      "variant_b": null,
+      "confidence": 1.0,
+      "notes": "Not found in either source"
+    },
+    "product.rated_power": {
+      "status": "missing",
+      "value_a": null,
+      "value_b": null,
+      "variant_a": null,
+      "variant_b": null,
+      "confidence": 1.0,
+      "notes": "Not found in either source"
+    },
+    "product.max_pv_input_power": {
+      "status": "source_only",
+      "value_a": null,
+      "value_b": "6.5 kW",
+      "variant_a": null,
+      "variant_b": "AM2",
+      "confidence": 0.9,
+      "notes": "Only found in AM2"
+    },
+    "product.max_pv_input_voltage": {
+      "status": "source_only",
+      "value_a": null,
+      "value_b": "1100 V",
+      "variant_a": null,
+      "variant_b": "AM2",
+      "confidence": 0.9,
+      "notes": "Only found in AM2"
+    },
+    "product.mppt_voltage_range": {
+      "status": "source_only",
+      "value_a": null,
+      "value_b": "120-1000 V",
+      "variant_a": null,
+      "variant_b": "AM2",
+      "confidence": 0.9,
+      "notes": "Only found in AM2"
+    },
+    "product.startup_voltage": {
+      "status": "source_only",
+      "value_a": null,
+      "value_b": "140 V",
+      "variant_a": null,
+      "variant_b": "AM2",
+      "confidence": 0.9,
+      "notes": "Only found in AM2"
+    },
+    "product.rated_output_power": {
+      "status": "source_only",
+      "value_a": null,
+      "value_b": "5 kW",
+      "variant_a": null,
+      "variant_b": "AM2",
+      "confidence": 0.9,
+      "notes": "Only found in AM2"
+    },
+    "product.rated_output_current": {
+      "status": "source_only",
+      "value_a": null,
+      "value_b": "7.6/7.3 A",
+      "variant_a": null,
+      "variant_b": "AM2",
+      "confidence": 0.9,
+      "notes": "Only found in AM2"
+    },
+    "product.rated_output_voltage": {
+      "status": "conflict",
+      "value_a": "3L/N/PE 220/380V, 230/400V 0.85Un-1.1Un (this may vary with grid standards) V",
+      "value_b": "220/380V, 230/400V 0.85Un-1.1Un V",
+      "variant_a": "AM2-P1",
+      "variant_b": "AM2",
+      "confidence": 0.5,
+      "notes": "Values differ - manual review needed"
+    },
+    "product.grid_frequency": {
+      "status": "source_only",
+      "value_a": null,
+      "value_b": "50/45-55, 60/55-65 Hz",
+      "variant_a": null,
+      "variant_b": "AM2",
+      "confidence": 0.9,
+      "notes": "Only found in AM2"
+    },
+    "product.max_efficiency": {
+      "status": "verified",
+      "value_a": "98.2%",
+      "value_b": "98.2%",
+      "variant_a": "AM2-P1",
+      "variant_b": "AM2",
+      "confidence": 0.95,
+      "notes": "Exact match"
+    },
+    "product.euro_efficiency": {
+      "status": "conflict",
+      "value_a": "97.5%",
+      "value_b": "97.6%",
+      "variant_a": "AM2-P1",
+      "variant_b": "AM2",
+      "confidence": 0.5,
+      "notes": "Values differ - manual review needed"
+    },
+    "product.weight": {
+      "status": "verified",
+      "value_a": "11 kg",
+      "value_b": "11 kg",
+      "variant_a": "AM2-P1",
+      "variant_b": "AM2",
+      "confidence": 0.95,
+      "notes": "Exact match"
+    },
+    "product.ip_rating": {
+      "status": "conflict",
+      "value_a": "IP65",
+      "value_b": "IP IP",
+      "variant_a": "AM2-P1",
+      "variant_b": "AM2",
+      "confidence": 0.5,
+      "notes": "Values differ - manual review needed"
+    },
+    "product.operating_temperature": {
+      "status": "source_only",
+      "value_a": null,
+      "value_b": "to \u00b0C",
+      "variant_a": null,
+      "variant_b": "AM2",
+      "confidence": 0.9,
+      "notes": "Only found in AM2"
+    },
+    "product.warranty": {
+      "status": "verified",
+      "value_a": "5 Years",
+      "value_b": "5 Years",
+      "variant_a": "AM2-P1",
+      "variant_b": "AM2",
+      "confidence": 0.95,
+      "notes": "Exact match"
+    },
+    "product.topology": {
+      "status": "source_only",
+      "value_a": null,
+      "value_b": "Non-Isolated",
+      "variant_a": null,
+      "variant_b": "AM2",
+      "confidence": 0.9,
+      "notes": "Only found in AM2"
+    },
+    "manufacturer.legal_name": {
+      "status": "missing",
+      "value_a": null,
+      "value_b": null,
+      "variant_a": null,
+      "variant_b": null,
+      "confidence": 1.0,
+      "notes": "Not found in either source"
+    },
+    "manufacturer.factory_address": {
+      "status": "missing",
+      "value_a": null,
+      "value_b": null,
+      "variant_a": null,
+      "variant_b": null,
+      "confidence": 1.0,
+      "notes": "Not found in either source"
+    },
+    "manufacturer.country": {
+      "status": "missing",
+      "value_a": null,
+      "value_b": null,
+      "variant_a": null,
+      "variant_b": null,
+      "confidence": 1.0,
+      "notes": "Not found in either source"
+    },
+    "compliance.grid_standards": {
+      "status": "missing",
+      "value_a": null,
+      "value_b": null,
+      "variant_a": null,
+      "variant_b": null,
+      "confidence": 1.0,
+      "notes": "Not found in either source"
+    },
+    "compliance.safety_emc_standards": {
+      "status": "source_only",
+      "value_a": null,
+      "value_b": "IEC/EN 61000-6-1/2/3/4, IEC/EN 62109-1, IEC/EN 62109-2",
+      "variant_a": null,
+      "variant_b": "AM2",
+      "confidence": 0.9,
+      "notes": "Only found in AM2"
+    },
+    "compliance.surge_protection": {
+      "status": "conflict",
+      "value_a": "DC Type II / AC Type II",
+      "value_b": "TYPE II(DC), TYPE II(AC)",
+      "variant_a": "AM2-P1",
+      "variant_b": "AM2",
+      "confidence": 0.5,
+      "notes": "Values differ - manual review needed"
+    },
+    "protection.dc_reverse_polarity": {
+      "status": "source_only",
+      "value_a": null,
+      "value_b": "Yes",
+      "variant_a": null,
+      "variant_b": "AM2",
+      "confidence": 0.9,
+      "notes": "Only found in AM2"
+    },
+    "protection.ac_short_circuit": {
+      "status": "source_only",
+      "value_a": null,
+      "value_b": "Yes",
+      "variant_a": null,
+      "variant_b": "AM2",
+      "confidence": 0.9,
+      "notes": "Only found in AM2"
+    },
+    "protection.thermal": {
+      "status": "source_only",
+      "value_a": null,
+      "value_b": "Yes",
+      "variant_a": null,
+      "variant_b": "AM2",
+      "confidence": 0.9,
+      "notes": "Only found in AM2"
+    },
+    "protection.islanding": {
+      "status": "source_only",
+      "value_a": null,
+      "value_b": "Yes",
+      "variant_a": null,
+      "variant_b": "AM2",
+      "confidence": 0.9,
+      "notes": "Only found in AM2"
+    }
+  },
+  "conflicts": [
+    {
+      "field": "product.rated_output_voltage",
+      "value_a": "3L/N/PE 220/380V, 230/400V 0.85Un-1.1Un (this may vary with grid standards) V",
+      "value_b": "220/380V, 230/400V 0.85Un-1.1Un V",
+      "variant_a": "AM2-P1",
+      "variant_b": "AM2",
+      "notes": "Values differ - manual review needed"
+    },
+    {
+      "field": "product.euro_efficiency",
+      "value_a": "97.5%",
+      "value_b": "97.6%",
+      "variant_a": "AM2-P1",
+      "variant_b": "AM2",
+      "notes": "Values differ - manual review needed"
+    },
+    {
+      "field": "product.ip_rating",
+      "value_a": "IP65",
+      "value_b": "IP IP",
+      "variant_a": "AM2-P1",
+      "variant_b": "AM2",
+      "notes": "Values differ - manual review needed"
+    },
+    {
+      "field": "compliance.surge_protection",
+      "value_a": "DC Type II / AC Type II",
+      "value_b": "TYPE II(DC), TYPE II(AC)",
+      "variant_a": "AM2-P1",
+      "variant_b": "AM2",
+      "notes": "Values differ - manual review needed"
+    }
+  ]
+}

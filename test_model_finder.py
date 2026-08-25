@@ -30,7 +30,7 @@ def main():
         all_sources[doc_id] = blocks
         print(f"  {doc_id}: {sum(len(b) for b in blocks.values())} blocks")
 
-    requested_model = "SUN-5K-G06P3"
+    requested_model = "5K"
 
     print(f"\n[3/3] Finding target model: {requested_model}")
 
