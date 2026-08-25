@@ -1,0 +1,1181 @@
+{
+  "document_id": "source_2",
+  "source_file": "cache\\source_2\\datasheet_sun-4-15k-g06p3-eu-am2_240318_en.pdf",
+  "extraction_method": "tesseract",
+  "pages": {
+    "page_1": {
+      "raw_text": "Three Phase String Inverter\nSUN-4/5/6/7/8/10/12/15K-GO6P3-EU-AM2\n: P \u2019 a\n- 4 a\n* M Sy \\\n. on _ d : . Pe \\\n| 2 MPP trackers, Max. efficiency up to 98.5%\n| \u2014 (F} Zero export application, VSG application\n\u201ca String intelligent monitoring (optional)\n| Wide output voltage range\nLeye Anti-PID function (Optional)\n",
+      "confidence": 0.7966666666666667,
+      "blocks": [
+        {
+          "document_id": "source_2",
+          "page": 1,
+          "block_type": "text",
+          "text": "String Three Phase Inverter",
+          "bbox": [
+            174,
+            127,
+            1730,
+            271
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.9575
+        },
+        {
+          "document_id": "source_2",
+          "page": 1,
+          "block_type": "text",
+          "text": "SUN-4/5/6/7/8/10/12/15K-GO6P3-EU-AM2",
+          "bbox": [
+            176,
+            325,
+            2168,
+            402
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.18
+        },
+        {
+          "document_id": "source_2",
+          "page": 1,
+          "block_type": "text",
+          "text": "\u2014 ll",
+          "bbox": [
+            1061,
+            477,
+            2124,
+            498
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.445
+        },
+        {
+          "document_id": "source_2",
+          "page": 1,
+          "block_type": "text",
+          "text": "'",
+          "bbox": [
+            1295,
+            504,
+            1298,
+            507
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.34
+        },
+        {
+          "document_id": "source_2",
+          "page": 1,
+          "block_type": "text",
+          "text": "i",
+          "bbox": [
+            2052,
+            2011,
+            2055,
+            2017
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.21
+        },
+        {
+          "document_id": "source_2",
+          "page": 1,
+          "block_type": "text",
+          "text": "a",
+          "bbox": [
+            2256,
+            2113,
+            2325,
+            2198
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.29
+        },
+        {
+          "document_id": "source_2",
+          "page": 1,
+          "block_type": "text",
+          "text": "x",
+          "bbox": [
+            2259,
+            2122,
+            2271,
+            2134
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.54
+        },
+        {
+          "document_id": "source_2",
+          "page": 1,
+          "block_type": "text",
+          "text": "a",
+          "bbox": [
+            2304,
+            2131,
+            2313,
+            2140
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.18
+        },
+        {
+          "document_id": "source_2",
+          "page": 1,
+          "block_type": "text",
+          "text": "4;",
+          "bbox": [
+            1375,
+            2308,
+            1448,
+            2374
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.51
+        },
+        {
+          "document_id": "source_2",
+          "page": 1,
+          "block_type": "text",
+          "text": "trackers, efficiency 2 MPP Max. 98.5% to",
+          "bbox": [
+            1507,
+            2324,
+            2296,
+            2362
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.9542857142857143
+        },
+        {
+          "document_id": "source_2",
+          "page": 1,
+          "block_type": "text",
+          "text": "up",
+          "bbox": [
+            2085,
+            2334,
+            2127,
+            2362
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.95
+        },
+        {
+          "document_id": "source_2",
+          "page": 1,
+          "block_type": "text",
+          "text": "(F}",
+          "bbox": [
+            1357,
+            2481,
+            1459,
+            2583
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.79
+        },
+        {
+          "document_id": "source_2",
+          "page": 1,
+          "block_type": "text",
+          "text": "application, application Zero VSG export",
+          "bbox": [
+            1507,
+            2513,
+            2236,
+            2551
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.9520000000000001
+        },
+        {
+          "document_id": "source_2",
+          "page": 1,
+          "block_type": "text",
+          "text": "(optional) String intelligent monitoring",
+          "bbox": [
+            1506,
+            2707,
+            2197,
+            2746
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.9575
+        },
+        {
+          "document_id": "source_2",
+          "page": 1,
+          "block_type": "text",
+          "text": "Wide voltage output",
+          "bbox": [
+            1505,
+            2896,
+            1876,
+            2934
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.95
+        },
+        {
+          "document_id": "source_2",
+          "page": 1,
+          "block_type": "text",
+          "text": "range",
+          "bbox": [
+            1889,
+            2906,
+            1987,
+            2934
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.96
+        },
+        {
+          "document_id": "source_2",
+          "page": 1,
+          "block_type": "text",
+          "text": "Leye",
+          "bbox": [
+            180,
+            3070,
+            466,
+            3184
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.32
+        },
+        {
+          "document_id": "source_2",
+          "page": 1,
+          "block_type": "text",
+          "text": "(Optional) Anti-PID function",
+          "bbox": [
+            1505,
+            3091,
+            2017,
+            3130
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.89
+        },
+        {
+          "document_id": "source_2",
+          "page": 1,
+          "block_type": "text",
+          "text": "Stock Code: 605117.SH",
+          "bbox": [
+            181,
+            3206,
+            455,
+            3230
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.8933333333333333
+        }
+      ]
+    },
+    "page_2": {
+      "raw_text": "Technical Data www.deyeinverter.com\n-EU-AM2 -EU-AM2 -EU-AM2 -EU-AM2 -EU-AM2 -EU-AM2 -EU-AM2 -EU-AM2\n\nPV String Input Data\n\nMax. PV Input Power (kW) 5.2 6.5 78 91 10.4 13 15.6 19.5\n\nMax. PV Input Voltage (V) 1100\n\nStart-up Voltage (V) 140\n\nMPPT Voltage Range (V) 120-1000\n\nRated PV Input Voltage (V) 600\n\nMax. Operating PV Input Current (A) 13+13 13+26\n\nMax. Input Short Circuit Current (A) 19.54+19.5 19.5439\n\nNa of otrines net MPP Tracker 2/1+1 2/142\n\nAC Output Side\n\nRated AC Output Active Power (kW) 4 5 6 7 8 10 12 15\n\nMax. AC Output Apparent Power (kVA) 44 55 | 66 | 77 | 88 | 4a | 1392 | 16.5\n\nRated AC Output Current (A) 6.1/5.8 22.8/21.8\n\nMax. AC Output Current (A) 6.7/6.4 25/24\n\nRated Output Voltage/Range (V) 220/380V, 230/400V 0.85Un-1.1Un\n\nGrid Connection Form 3L/N/PE\n\nRated Output Grid Frequency/Range(Hz) 50/45-55, 60/55-65\n\nTotal Current Harmonic Distortion THDi <3%\n\nDC Injection Current <0.5%ln\n\nEfficiency\n\nMax. Efficiency 98.1% 98.2% 98.3% 98.5%\n\nMPPT Efficiency >99%\n\nEquipment Protection\n\nDC Polarity Reverse Connection Protection Yes\n\nAC Output Overcurrent Protection Yes\n\nAC Output Overvoltage Protection Yes\n\nAC Output Short Circuit Protection Yes\n\nThermal Protection Yes\n\nDC Terminal Insulation Impedance Monitoring Yes\n\nDC Component Monitoring Yes\n\nGround Fault Current Monitoring Yes\n\nPower Network Monitoring Yes\n\nIsland Protection Monitoring Yes\n\nEarth Fault Detection Yes\n\nOvervoltage Load Drop Protection Yes\n\nResidual Current (RCD) Detection Yes\n\nSurge Protection Level TYPE II(DC), TYPE II(AC)\n\nInterface\n\nCommunication Interface RS485/RS232 /WiFi/LAN\n\nGeneral Data\n\nOperating Temperature Range (\u00b0C) -25 to +60\u00b0C, >45\u00b0C Derating\n\nPermissible Ambient Humidity 0-100%\n\nPermissible Altitude (m) 4000m\n\nNoise (dB) <45\n\nIngress Protection(IP) Rating IP 65\n\nInverter Topology Non-lIsolated\n\nOver Voltage Category OVC II(DC), OVC III(AC)\n\nCabinet Size (WxHxD mm) 283x463x178 (Excluding Connectors and Brackets)\n\nWeight (kg) 11\n\nWarranty 5 Years\n\nType of Cooling Natural Cooling\n\nGrid Regulation IEC 61727, IEC 62116, CEI 0-21, EN 50549, NRS 097, RD 140, UNE 217002,\n\nOVE-Richtlinie R25, G99, VDE-AR-N 4105\nSafety EMC/Standard IEC/EN 61000-6-1/2/3/4, IEC/EN 62109-1, IEC/EN 62109-2\nL) Ningbo Deye Inverter Technology Co., Ltd.\n",
+      "confidence": 0.9032712765957447,
+      "blocks": [
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "TechnicalData",
+          "bbox": [
+            207,
+            106,
+            595,
+            150
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.68
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "SUN-4K-GO6P3 SUN-5K-GO6P3 SUN-6K-GO6P3 SUN-7K-GO6P3 SUN-8K-GO6P3 SUN-10K-GO6P3 SUN-12K-GO6P3 SUN-15K-GO6P3",
+          "bbox": [
+            816,
+            222,
+            2306,
+            240
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.68
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "-EU-AM2 -EU-AM2 -EU-AM2 -EU-AM2 -EU-AM2 -EU-AM2",
+          "bbox": [
+            1223,
+            252,
+            2268,
+            270
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.815
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "PV String Input Data",
+          "bbox": [
+            208,
+            322,
+            482,
+            351
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.955
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "(kW) 5.2 78 91 10.4 13 19.5 Max. PV Input Power 6.5 15.6",
+          "bbox": [
+            209,
+            372,
+            2247,
+            401
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.9392307692307692
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "Voltage (V) 1100 Max. PV Input",
+          "bbox": [
+            209,
+            417,
+            1594,
+            455
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.9483333333333333
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "(V) Start-up Voltage 140",
+          "bbox": [
+            207,
+            469,
+            1585,
+            499
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.945
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "MPPT Voltage (V) 120-1000 Range",
+          "bbox": [
+            209,
+            516,
+            1627,
+            554
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.9359999999999999
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "(V) Rated Voltage 600 PV Input",
+          "bbox": [
+            209,
+            568,
+            1585,
+            598
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.9466666666666668
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "(A) Operating Current 13+13 13+26 Max. PV Input",
+          "bbox": [
+            209,
+            616,
+            2263,
+            646
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.935
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "Short Current 19.54+19.5 (A) Circuit 19.5439 Max. Input",
+          "bbox": [
+            209,
+            663,
+            2276,
+            700
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.825
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "otrines of net MPP Na",
+          "bbox": [
+            209,
+            713,
+            492,
+            788
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.418
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "2/142",
+          "bbox": [
+            2179,
+            739,
+            2260,
+            763
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.5
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "Tracker",
+          "bbox": [
+            503,
+            755,
+            604,
+            778
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.7
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "AC Output Side",
+          "bbox": [
+            206,
+            803,
+            416,
+            831
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.9566666666666667
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "Output (kW) Rated AC Active 8 10 12 Power 4 5 6 7 15",
+          "bbox": [
+            209,
+            846,
+            2234,
+            885
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.9592857142857143
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "(kVA) AC Output 8.8 13.2 Max. Apparent Power 4.4 5.5 6.6 77 11 16.5",
+          "bbox": [
+            209,
+            904,
+            2247,
+            933
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.9157142857142857
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "(A) | | Current Rated AC Output 6.1/5.8 7.6/7.3 9.1/8.7 10.7/10.2 12.2/11.6 15.2/14.5 18.2/17.4 22.8/21.8",
+          "bbox": [
+            209,
+            946,
+            2284,
+            987
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.9266666666666667
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "Output Current | | (A) AC Max. 6.7/6.4 8.4/8 10/9.6 11.7/11.2 13.4/12.8 16.7/16 20/19.2 25/24",
+          "bbox": [
+            209,
+            993,
+            2260,
+            1039
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.9073333333333333
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "Voltage/Range (V) Rated Output 220/380V, 230/400V 0.85Un-1.1Un",
+          "bbox": [
+            209,
+            1042,
+            1811,
+            1080
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.9185714285714286
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "Grid Connection Form 3L/N/PE",
+          "bbox": [
+            207,
+            1097,
+            1617,
+            1125
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.945
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "Frequency/Range(Hz) Rated Output Grid 50/45-55, 60/55-65",
+          "bbox": [
+            209,
+            1145,
+            1694,
+            1176
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.92
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "Factor Adjustment Power Range 0.8 leading 0.8 lagging to",
+          "bbox": [
+            209,
+            1190,
+            1725,
+            1227
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.9533333333333333
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "Total Current Harmonic Distortion THDi <3%",
+          "bbox": [
+            206,
+            1245,
+            1588,
+            1268
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.9333333333333332
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "DC Injection Current <0.5%ln",
+          "bbox": [
+            209,
+            1293,
+            1612,
+            1322
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.94
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "Efficiency",
+          "bbox": [
+            208,
+            1344,
+            339,
+            1372
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.96
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "Efficiency 98.1% 98.2% 98.3% 98.5% Max.",
+          "bbox": [
+            209,
+            1392,
+            2260,
+            1420
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.9433333333333332
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "Efficiency 97.5% 97.6% 97 8% 98% Euro",
+          "bbox": [
+            209,
+            1441,
+            2248,
+            1469
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.8728571428571429
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "Efficiency >99% MPPT",
+          "bbox": [
+            209,
+            1493,
+            1597,
+            1521
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.93
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "Equipment Protection",
+          "bbox": [
+            208,
+            1539,
+            502,
+            1567
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.96
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "DC Polarity Connection Protection Reverse Yes",
+          "bbox": [
+            209,
+            1588,
+            1582,
+            1616
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.9583333333333333
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "AC Output Overcurrent Protection Yes",
+          "bbox": [
+            206,
+            1638,
+            1582,
+            1666
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.9520000000000001
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "AC Output Overvoltage Protection Yes",
+          "bbox": [
+            206,
+            1687,
+            1582,
+            1716
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.9420000000000001
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "AC Output Short Circuit Protection Yes",
+          "bbox": [
+            206,
+            1736,
+            1582,
+            1764
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.9583333333333333
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "Thermal Protection Yes",
+          "bbox": [
+            206,
+            1786,
+            1582,
+            1810
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.96
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "DC Terminal Insulation Impedance Monitoring Yes",
+          "bbox": [
+            209,
+            1835,
+            1582,
+            1864
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.96
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "DC Component Monitoring Yes",
+          "bbox": [
+            209,
+            1884,
+            1582,
+            1913
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.955
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "Ground Fault Current Monitoring Yes",
+          "bbox": [
+            207,
+            1933,
+            1580,
+            1962
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.956
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "Network Monitoring Power Yes",
+          "bbox": [
+            209,
+            1984,
+            1582,
+            2013
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.9625
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "Island Protection Monitoring Yes",
+          "bbox": [
+            209,
+            2032,
+            1582,
+            2061
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.9475
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "Earth Fault Detection Yes",
+          "bbox": [
+            209,
+            2083,
+            1582,
+            2107
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.96
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "Overvoltage Load Protection Drop Yes",
+          "bbox": [
+            207,
+            2132,
+            1582,
+            2161
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.95
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "(RCD) Residual Current Detection Yes",
+          "bbox": [
+            209,
+            2179,
+            1582,
+            2208
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.96
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "Surge Protection Level II(DC), II(AC) TYPE TYPE",
+          "bbox": [
+            207,
+            2230,
+            1726,
+            2260
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.8614285714285714
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "Interface",
+          "bbox": [
+            208,
+            2278,
+            327,
+            2301
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.96
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "Communication Interface RS485/RS232 /WiFi/LAN",
+          "bbox": [
+            207,
+            2326,
+            1731,
+            2350
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.8925
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "General Data",
+          "bbox": [
+            207,
+            2376,
+            382,
+            2399
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.96
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "Operating Temperature (\u00b0C) +60\u00b0C, >45\u00b0C Range -25 Derating to",
+          "bbox": [
+            207,
+            2419,
+            1758,
+            2457
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.9266666666666667
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "Permissible Ambient Humidity 0-100%",
+          "bbox": [
+            209,
+            2473,
+            1611,
+            2501
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.9375
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "(m) Permissible Altitude 4000m",
+          "bbox": [
+            209,
+            2522,
+            1606,
+            2551
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.9225
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "(dB) Noise <45",
+          "bbox": [
+            209,
+            2571,
+            1584,
+            2600
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.94
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "Protection(IP) Rating IP 65 Ingress",
+          "bbox": [
+            209,
+            2621,
+            1592,
+            2651
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.6940000000000001
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "Inverter Topology Non-lIsolated",
+          "bbox": [
+            209,
+            2666,
+            1643,
+            2703
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.81
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "Over II(DC), III(AC) Voltage Category OVC OVC",
+          "bbox": [
+            207,
+            2714,
+            1723,
+            2752
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.6628571428571429
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "(WxHxD mm) Cabinet Size (Excluding Brackets) 283x463x178 Connectors and",
+          "bbox": [
+            207,
+            2767,
+            1909,
+            2798
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.9488888888888889
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "(kg) Weight 11",
+          "bbox": [
+            206,
+            2817,
+            1575,
+            2847
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.9466666666666668
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "Warranty 5 Years",
+          "bbox": [
+            206,
+            2864,
+            1608,
+            2899
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.95
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "of Cooling Natural Cooling Type",
+          "bbox": [
+            206,
+            2916,
+            1666,
+            2945
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.948
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "CEI 0-21, IEC 61727, IEC 62116, 50549, NRS 097, 140, 217002, EN RD UNE",
+          "bbox": [
+            1040,
+            2960,
+            2073,
+            3011
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.8978571428571429
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "Grid Regulation",
+          "bbox": [
+            207,
+            2982,
+            408,
+            3011
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.96
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "OVE-Richtlinie R25, G99, 4105 VDE-AR-N",
+          "bbox": [
+            1270,
+            3003,
+            1847,
+            3030
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.9179999999999999
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "Safety EMC/Standard IEC/EN 61000-6-1/2/3/4, IEC/EN 62109-1, IEC/EN 62109-2",
+          "bbox": [
+            207,
+            3048,
+            1972,
+            3076
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.91
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "LWeye Ningbo Technology Ltd. Deye Inverter Co.,",
+          "bbox": [
+            192,
+            3231,
+            1219,
+            3321
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.8557142857142856
+        },
+        {
+          "document_id": "source_2",
+          "page": 2,
+          "block_type": "text",
+          "text": "| | Add: No. 26 South YongJiang Road, Daqi, Beilun, NingBo, Zhejiang, China. Tel: 0086-0574-86120560 E-mail: market@deye.com.cn",
+          "bbox": [
+            475,
+            3282,
+            2375,
+            3309
+          ],
+          "extraction_method": "tesseract",
+          "confidence": 0.91
+        }
+      ]
+    }
+  }
+}

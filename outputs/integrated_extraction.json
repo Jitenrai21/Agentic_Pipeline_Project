@@ -1,0 +1,127 @@
+{
+  "model_match": {
+    "requested": "SUN-5K-G06P3",
+    "matched_model": "SUN-5K-G06P3",
+    "variant": "AM2",
+    "confidence": 0.95
+  },
+  "column_index": 1,
+  "models_found": [
+    "SUN-4K-G06P3",
+    "SUN-5K-G06P3",
+    "SUN-6K-G06P3",
+    "SUN-7K-G06P3",
+    "SUN-8K-G06P3",
+    "SUN-10K-G06P3",
+    "SUN-12K-G06P3",
+    "SUN-15K-G06P3",
+    "SUN-4/5/6/7/8/10/12/15K-GO6P3-EU-AM2"
+  ],
+  "fields": {
+    "product.max_pv_input_power": {
+      "value": "6.5",
+      "unit": "kW",
+      "source": "table"
+    },
+    "product.max_pv_input_voltage": {
+      "value": "1100",
+      "unit": "V",
+      "source": "table"
+    },
+    "product.mppt_voltage_range": {
+      "value": "120-1000",
+      "unit": "V",
+      "source": "table"
+    },
+    "product.startup_voltage": {
+      "value": "140",
+      "unit": "V",
+      "source": "table"
+    },
+    "product.rated_output_power": {
+      "value": "5",
+      "unit": "kW",
+      "source": "table"
+    },
+    "product.rated_output_current": {
+      "value": "7.6/7.3",
+      "unit": "A",
+      "source": "table"
+    },
+    "product.rated_output_voltage": {
+      "value": "(V)",
+      "unit": "",
+      "source": "table"
+    },
+    "product.grid_frequency": {
+      "value": "50/45-55,",
+      "unit": "",
+      "source": "table"
+    },
+    "product.max_efficiency": {
+      "value": "98.2%",
+      "unit": "",
+      "source": "table"
+    },
+    "product.euro_efficiency": {
+      "value": "97.6%",
+      "unit": "",
+      "source": "table"
+    },
+    "product.weight": {
+      "value": "11",
+      "unit": "kg",
+      "source": "table"
+    },
+    "product.operating_temperature": {
+      "value": "(\u00b0C)",
+      "unit": "",
+      "source": "table"
+    },
+    "product.warranty": {
+      "value": "Years",
+      "unit": "",
+      "source": "table"
+    },
+    "product.topology": {
+      "value": "Non-Isolated",
+      "unit": "",
+      "source": "table"
+    },
+    "compliance.grid_standards": {
+      "value": "61727,",
+      "unit": "",
+      "source": "table"
+    },
+    "compliance.safety_emc_standards": {
+      "value": "61000-6-1/2/3/4,",
+      "unit": "",
+      "source": "table"
+    },
+    "compliance.surge_protection": {
+      "value": "TYPE",
+      "unit": "",
+      "source": "table"
+    },
+    "protection.dc_reverse_polarity": {
+      "value": "Yes",
+      "unit": "",
+      "source": "table"
+    },
+    "protection.ac_short_circuit": {
+      "value": "Yes",
+      "unit": "",
+      "source": "table"
+    },
+    "protection.thermal": {
+      "value": "Yes",
+      "unit": "",
+      "source": "table"
+    },
+    "protection.islanding": {
+      "value": "Yes",
+      "unit": "",
+      "source": "table"
+    }
+  }
+}

@@ -3,99 +3,253 @@
     "document_id": "source_2",
     "page": 1,
     "block_type": "text",
-    "text": "Three Phase String Inverter",
+    "text": "String Three Phase Inverter",
     "bbox": [
-      41.1909,
-      32.456880400000045,
-      415.1123331599999,
-      69.45648040000003
+      174,
+      127,
+      1730,
+      271
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.9575
   },
   {
     "document_id": "source_2",
     "page": 1,
     "block_type": "text",
-    "text": "SUN-4/5/6/7/8/10/12/15K-G06P3-EU-AM2",
+    "text": "SUN-4/5/6/7/8/10/12/15K-GO6P3-EU-AM2",
     "bbox": [
-      41.1904,
-      77.84230000000002,
-      521.6704000000001,
-      101.84230000000002
+      176,
+      325,
+      2168,
+      402
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.18
   },
   {
     "document_id": "source_2",
     "page": 1,
     "block_type": "text",
-    "text": "2 MPP trackers, Max. efficiency up to 98.5%",
+    "text": "\u2014 ll",
     "bbox": [
-      361.1763,
-      556.8825,
-      551.1953,
-      566.8825
+      1061,
+      477,
+      2124,
+      498
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.445
   },
   {
     "document_id": "source_2",
     "page": 1,
     "block_type": "text",
-    "text": "Zero export application, VSG application",
+    "text": "'",
     "bbox": [
-      361.1763,
-      602.2125000000001,
-      536.9153,
-      612.2125000000001
+      1295,
+      504,
+      1298,
+      507
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.34
   },
   {
     "document_id": "source_2",
     "page": 1,
     "block_type": "text",
-    "text": "String intelligent monitoring (optional)",
+    "text": "i",
     "bbox": [
-      361.1768,
-      649.0461,
-      528.0668000000001,
-      659.0461
+      2052,
+      2011,
+      2055,
+      2017
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.21
   },
   {
     "document_id": "source_2",
     "page": 1,
     "block_type": "text",
-    "text": "Wide output voltage range",
+    "text": "a",
     "bbox": [
-      361.1768,
-      694.1349,
-      477.2858,
-      704.1349
+      2256,
+      2113,
+      2325,
+      2198
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.29
   },
   {
     "document_id": "source_2",
     "page": 1,
     "block_type": "text",
-    "text": "Anti-PID function (Optional)",
+    "text": "x",
     "bbox": [
-      361.1763,
-      741.1842,
-      484.77630000000005,
-      751.1842
+      2259,
+      2122,
+      2271,
+      2134
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.54
+  },
+  {
+    "document_id": "source_2",
+    "page": 1,
+    "block_type": "text",
+    "text": "a",
+    "bbox": [
+      2304,
+      2131,
+      2313,
+      2140
+    ],
+    "extraction_method": "tesseract",
+    "confidence": 0.18
+  },
+  {
+    "document_id": "source_2",
+    "page": 1,
+    "block_type": "text",
+    "text": "4;",
+    "bbox": [
+      1375,
+      2308,
+      1448,
+      2374
+    ],
+    "extraction_method": "tesseract",
+    "confidence": 0.51
+  },
+  {
+    "document_id": "source_2",
+    "page": 1,
+    "block_type": "text",
+    "text": "trackers, efficiency 2 MPP Max. 98.5% to",
+    "bbox": [
+      1507,
+      2324,
+      2296,
+      2362
+    ],
+    "extraction_method": "tesseract",
+    "confidence": 0.9542857142857143
+  },
+  {
+    "document_id": "source_2",
+    "page": 1,
+    "block_type": "text",
+    "text": "up",
+    "bbox": [
+      2085,
+      2334,
+      2127,
+      2362
+    ],
+    "extraction_method": "tesseract",
+    "confidence": 0.95
+  },
+  {
+    "document_id": "source_2",
+    "page": 1,
+    "block_type": "text",
+    "text": "(F}",
+    "bbox": [
+      1357,
+      2481,
+      1459,
+      2583
+    ],
+    "extraction_method": "tesseract",
+    "confidence": 0.79
+  },
+  {
+    "document_id": "source_2",
+    "page": 1,
+    "block_type": "text",
+    "text": "application, application Zero VSG export",
+    "bbox": [
+      1507,
+      2513,
+      2236,
+      2551
+    ],
+    "extraction_method": "tesseract",
+    "confidence": 0.9520000000000001
+  },
+  {
+    "document_id": "source_2",
+    "page": 1,
+    "block_type": "text",
+    "text": "(optional) String intelligent monitoring",
+    "bbox": [
+      1506,
+      2707,
+      2197,
+      2746
+    ],
+    "extraction_method": "tesseract",
+    "confidence": 0.9575
+  },
+  {
+    "document_id": "source_2",
+    "page": 1,
+    "block_type": "text",
+    "text": "Wide voltage output",
+    "bbox": [
+      1505,
+      2896,
+      1876,
+      2934
+    ],
+    "extraction_method": "tesseract",
+    "confidence": 0.95
+  },
+  {
+    "document_id": "source_2",
+    "page": 1,
+    "block_type": "text",
+    "text": "range",
+    "bbox": [
+      1889,
+      2906,
+      1987,
+      2934
+    ],
+    "extraction_method": "tesseract",
+    "confidence": 0.96
+  },
+  {
+    "document_id": "source_2",
+    "page": 1,
+    "block_type": "text",
+    "text": "Leye",
+    "bbox": [
+      180,
+      3070,
+      466,
+      3184
+    ],
+    "extraction_method": "tesseract",
+    "confidence": 0.32
+  },
+  {
+    "document_id": "source_2",
+    "page": 1,
+    "block_type": "text",
+    "text": "(Optional) Anti-PID function",
+    "bbox": [
+      1505,
+      3091,
+      2017,
+      3130
+    ],
+    "extraction_method": "tesseract",
+    "confidence": 0.89
   },
   {
     "document_id": "source_2",
@@ -103,12 +257,12 @@
     "block_type": "text",
     "text": "Stock Code: 605117.SH",
     "bbox": [
-      43.1909,
-      768.4696,
-      109.79213799999997,
-      776.4696
+      181,
+      3206,
+      455,
+      3230
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.8933333333333333
   }
 ]

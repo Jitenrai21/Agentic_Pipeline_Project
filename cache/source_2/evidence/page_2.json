@@ -3,581 +3,281 @@
     "document_id": "source_2",
     "page": 2,
     "block_type": "text",
-    "text": "Technical Data www.deyeinverter.com",
+    "text": "TechnicalData",
     "bbox": [
-      49.4658,
-      26.156700000000114,
-      555.016135,
-      40.156700000000114
+      207,
+      106,
+      595,
+      150
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.68
   },
   {
     "document_id": "source_2",
     "page": 2,
     "block_type": "text",
-    "text": "SUN-4K-G06P3 SUN-5K-G06P3 SUN-6K-G06P3 SUN-7K-G06P3 SUN-8K-G06P3 SUN-10K-G06P3 SUN-12K-G06P3 SUN-15K-G06P3 Model -EU-AM2 -EU-AM2 -EU-AM2 -EU-AM2 -EU-AM2 -EU-AM2 -EU-AM2 -EU-AM2",
+    "text": "SUN-4K-GO6P3 SUN-5K-GO6P3 SUN-6K-GO6P3 SUN-7K-GO6P3 SUN-8K-GO6P3 SUN-10K-GO6P3 SUN-12K-GO6P3 SUN-15K-GO6P3",
     "bbox": [
-      49.4941,
-      52.74438179999993,
-      553.5457376,
-      65.94416179999996
+      816,
+      222,
+      2306,
+      240
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
-  },
-  {
-    "document_id": "source_2",
-    "page": 2,
-    "block_type": "table",
-    "text": "PV String Input Data | ",
-    "bbox": [
-      46.5745,
-      74.60300000000004,
-      555.1301142857143,
-      86.39400000000009
-    ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0,
-    "table": {
-      "table_id": "table_1",
-      "headers": [
-        "PV String Input Data",
-        ""
-      ],
-      "rows": [],
-      "num_rows": 0,
-      "num_cols": 2,
-      "bbox": [
-        46.5745,
-        74.60300000000004,
-        555.1301142857143,
-        86.39400000000009
-      ],
-      "cells": []
-    }
-  },
-  {
-    "document_id": "source_2",
-    "page": 2,
-    "block_type": "table",
-    "text": "6.5 | 7.8 | 9.1 | 10.4 | 13 | 15.6",
-    "bbox": [
-      237.5154,
-      86.39400000000009,
-      509.7605,
-      98.18450000000007
-    ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0,
-    "table": {
-      "table_id": "table_2",
-      "headers": [
-        "6.5",
-        "7.8",
-        "9.1",
-        "10.4",
-        "13",
-        "15.6"
-      ],
-      "rows": [],
-      "num_rows": 0,
-      "num_cols": 6,
-      "bbox": [
-        237.5154,
-        86.39400000000009,
-        509.7605,
-        98.18450000000007
-      ],
-      "cells": []
-    }
+    "extraction_method": "tesseract",
+    "confidence": 0.68
   },
   {
     "document_id": "source_2",
     "page": 2,
     "block_type": "text",
-    "text": "5.2 Max. PV Input Power (kW) 19.5",
+    "text": "-EU-AM2 -EU-AM2 -EU-AM2 -EU-AM2 -EU-AM2 -EU-AM2",
     "bbox": [
-      49.4839,
-      88.78996359999985,
-      539.6007299999999,
-      96.29168440000001
+      1223,
+      252,
+      2268,
+      270
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.815
   },
   {
     "document_id": "source_2",
     "page": 2,
     "block_type": "text",
-    "text": "1100 Max. PV Input Voltage (V)",
+    "text": "PV String Input Data",
     "bbox": [
-      49.4839,
-      100.5196507999998,
-      382.72251339999997,
-      108.01945079999996
+      208,
+      322,
+      482,
+      351
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.955
   },
   {
     "document_id": "source_2",
     "page": 2,
     "block_type": "text",
-    "text": "Start-up Voltage (V) 140",
+    "text": "(kW) 5.2 78 91 10.4 13 19.5 Max. PV Input Power 6.5 15.6",
     "bbox": [
-      49.4839,
-      112.21933879999995,
-      380.5475714,
-      119.72663859999977
+      209,
+      372,
+      2247,
+      401
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.9392307692307692
   },
   {
     "document_id": "source_2",
     "page": 2,
     "block_type": "text",
-    "text": "MPPT Voltage Range (V) 120-1000",
+    "text": "Voltage (V) 1100 Max. PV Input",
     "bbox": [
-      49.4839,
-      124.37651459999995,
-      390.55230459999996,
-      131.88381439999978
+      209,
+      417,
+      1594,
+      455
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.9483333333333333
   },
   {
     "document_id": "source_2",
     "page": 2,
     "block_type": "text",
-    "text": "600 Rated PV Input Voltage (V)",
+    "text": "(V) Start-up Voltage 140",
     "bbox": [
-      49.4839,
-      135.94120619999978,
-      380.5475714,
-      143.44100619999995
+      207,
+      469,
+      1585,
+      499
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.945
   },
   {
     "document_id": "source_2",
     "page": 2,
     "block_type": "text",
-    "text": "13+26 13+13 Max. Operating PV Input Current (A)",
+    "text": "MPPT Voltage (V) 120-1000 Range",
     "bbox": [
-      49.4839,
-      147.40346120000004,
-      543.2997312,
-      154.90820039999994
+      209,
+      516,
+      1627,
+      554
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.9359999999999999
   },
   {
     "document_id": "source_2",
     "page": 2,
     "block_type": "text",
-    "text": "Max. Input Short Circuit Current (A) 19.5+39 19.5+19.5",
+    "text": "(V) Rated Voltage 600 PV Input",
     "bbox": [
-      49.4839,
-      159.67807319999986,
-      546.2696520000001,
-      167.1853729999998
+      209,
+      568,
+      1585,
+      598
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.9466666666666668
   },
   {
     "document_id": "source_2",
     "page": 2,
     "block_type": "text",
-    "text": "No. of MPP Trackers/",
+    "text": "(A) Operating Current 13+13 13+26 Max. PV Input",
     "bbox": [
-      49.4839,
-      171.46858180000004,
-      116.14301119999995,
-      178.96848180000006
+      209,
+      616,
+      2263,
+      646
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.935
   },
   {
     "document_id": "source_2",
     "page": 2,
     "block_type": "text",
-    "text": "2/1+1 2/1+2 No. of Strings per MPP Tracker",
+    "text": "Short Current 19.54+19.5 (A) Circuit 19.5439 Max. Input",
     "bbox": [
-      49.4839,
-      176.59268280000003,
-      542.519752,
-      187.96836180000003
+      209,
+      663,
+      2276,
+      700
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
-  },
-  {
-    "document_id": "source_2",
-    "page": 2,
-    "block_type": "table",
-    "text": "AC Output Side | 3",
-    "bbox": [
-      46.5745,
-      189.94752500000004,
-      555.1301142857143,
-      201.7385250000001
-    ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0,
-    "table": {
-      "table_id": "table_3",
-      "headers": [
-        "AC Output Side",
-        "3"
-      ],
-      "rows": [],
-      "num_rows": 0,
-      "num_cols": 2,
-      "bbox": [
-        46.5745,
-        189.94752500000004,
-        555.1301142857143,
-        201.7385250000001
-      ],
-      "cells": []
-    }
-  },
-  {
-    "document_id": "source_2",
-    "page": 2,
-    "block_type": "table",
-    "text": "5 | 6 | 7 | 8 | 10 | 12\n5.5 | 6.6 | 7.7 | 8.8 | 11 | 13.2\n7.6/7.3 | 9.1/8.7 | 10.7/10.2 | 12.2/11.6 | 15.2/14.5 | 18.2/17.4\n8.4/8 | 10/9.6 | 11.7/11.2 | 13.4/12.8 | 16.7/16 | 20/19.2",
-    "bbox": [
-      237.5154,
-      201.7385250000001,
-      509.7605,
-      248.9013
-    ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0,
-    "table": {
-      "table_id": "table_4",
-      "headers": [
-        "5",
-        "6",
-        "7",
-        "8",
-        "10",
-        "12"
-      ],
-      "rows": [
-        [
-          "5.5",
-          "6.6",
-          "7.7",
-          "8.8",
-          "11",
-          "13.2"
-        ],
-        [
-          "7.6/7.3",
-          "9.1/8.7",
-          "10.7/10.2",
-          "12.2/11.6",
-          "15.2/14.5",
-          "18.2/17.4"
-        ],
-        [
-          "8.4/8",
-          "10/9.6",
-          "11.7/11.2",
-          "13.4/12.8",
-          "16.7/16",
-          "20/19.2"
-        ]
-      ],
-      "num_rows": 3,
-      "num_cols": 6,
-      "bbox": [
-        237.5154,
-        201.7385250000001,
-        509.7605,
-        248.9013
-      ],
-      "cells": [
-        {
-          "text": "5.5",
-          "row_idx": 0,
-          "col_idx": 0,
-          "bbox": [
-            237.5154,
-            201.7385250000001,
-            282.8885,
-            213.52917500000004
-          ]
-        },
-        {
-          "text": "6.6",
-          "row_idx": 0,
-          "col_idx": 1,
-          "bbox": [
-            237.5154,
-            213.52917500000004,
-            282.8885,
-            225.3198
-          ]
-        },
-        {
-          "text": "7.7",
-          "row_idx": 0,
-          "col_idx": 2,
-          "bbox": [
-            237.5154,
-            225.3198,
-            282.8885,
-            237.11042500000005
-          ]
-        },
-        {
-          "text": "8.8",
-          "row_idx": 0,
-          "col_idx": 3,
-          "bbox": [
-            237.5154,
-            237.11042500000005,
-            282.8885,
-            248.9013
-          ]
-        },
-        {
-          "text": "11",
-          "row_idx": 0,
-          "col_idx": 4,
-          "bbox": [
-            282.8885,
-            201.7385250000001,
-            328.2635,
-            213.52917500000004
-          ]
-        },
-        {
-          "text": "13.2",
-          "row_idx": 0,
-          "col_idx": 5,
-          "bbox": [
-            282.8885,
-            213.52917500000004,
-            328.2635,
-            225.3198
-          ]
-        },
-        {
-          "text": "7.6/7.3",
-          "row_idx": 1,
-          "col_idx": 0,
-          "bbox": [
-            282.8885,
-            225.3198,
-            328.2635,
-            237.11042500000005
-          ]
-        },
-        {
-          "text": "9.1/8.7",
-          "row_idx": 1,
-          "col_idx": 1,
-          "bbox": [
-            282.8885,
-            237.11042500000005,
-            328.2635,
-            248.9013
-          ]
-        },
-        {
-          "text": "10.7/10.2",
-          "row_idx": 1,
-          "col_idx": 2,
-          "bbox": [
-            328.2635,
-            201.7385250000001,
-            373.5984,
-            213.52917500000004
-          ]
-        },
-        {
-          "text": "12.2/11.6",
-          "row_idx": 1,
-          "col_idx": 3,
-          "bbox": [
-            328.2635,
-            213.52917500000004,
-            373.5984,
-            225.3198
-          ]
-        },
-        {
-          "text": "15.2/14.5",
-          "row_idx": 1,
-          "col_idx": 4,
-          "bbox": [
-            328.2635,
-            225.3198,
-            373.5984,
-            237.11042500000005
-          ]
-        },
-        {
-          "text": "18.2/17.4",
-          "row_idx": 1,
-          "col_idx": 5,
-          "bbox": [
-            328.2635,
-            237.11042500000005,
-            373.5984,
-            248.9013
-          ]
-        },
-        {
-          "text": "8.4/8",
-          "row_idx": 2,
-          "col_idx": 0,
-          "bbox": [
-            373.5984,
-            201.7385250000001,
-            419.0125,
-            213.52917500000004
-          ]
-        },
-        {
-          "text": "10/9.6",
-          "row_idx": 2,
-          "col_idx": 1,
-          "bbox": [
-            373.5984,
-            213.52917500000004,
-            419.0125,
-            225.3198
-          ]
-        },
-        {
-          "text": "11.7/11.2",
-          "row_idx": 2,
-          "col_idx": 2,
-          "bbox": [
-            373.5984,
-            225.3198,
-            419.0125,
-            237.11042500000005
-          ]
-        },
-        {
-          "text": "13.4/12.8",
-          "row_idx": 2,
-          "col_idx": 3,
-          "bbox": [
-            373.5984,
-            237.11042500000005,
-            419.0125,
-            248.9013
-          ]
-        },
-        {
-          "text": "16.7/16",
-          "row_idx": 2,
-          "col_idx": 4,
-          "bbox": [
-            419.0125,
-            201.7385250000001,
-            464.3855,
-            213.52917500000004
-          ]
-        },
-        {
-          "text": "20/19.2",
-          "row_idx": 2,
-          "col_idx": 5,
-          "bbox": [
-            419.0125,
-            213.52917500000004,
-            464.3855,
-            225.3198
-          ]
-        }
-      ]
-    }
+    "extraction_method": "tesseract",
+    "confidence": 0.825
   },
   {
     "document_id": "source_2",
     "page": 2,
     "block_type": "text",
-    "text": "15 Rated AC Output Active Power (kW) 4",
+    "text": "otrines of net MPP Na",
     "bbox": [
-      49.4829,
-      203.56132379999997,
-      536.6308091999998,
-      211.06176360000006
+      209,
+      713,
+      492,
+      788
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.418
   },
   {
     "document_id": "source_2",
     "page": 2,
     "block_type": "text",
-    "text": "16.5 Max. AC Output Apparent Power (kVA) 4.4",
+    "text": "2/142",
     "bbox": [
-      49.48037160000001,
-      216.40848119999998,
-      539.6007299999999,
-      223.90886360000002
+      2179,
+      739,
+      2260,
+      763
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.5
   },
   {
     "document_id": "source_2",
     "page": 2,
     "block_type": "text",
-    "text": "Rated AC Output Current (A) 6.1/5.8 22.8/21.8",
+    "text": "Tracker",
     "bbox": [
-      49.48037160000001,
-      227.47876840000004,
-      548.3212046000001,
-      235.63056360000007
+      503,
+      755,
+      604,
+      778
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.7
   },
   {
     "document_id": "source_2",
     "page": 2,
     "block_type": "text",
-    "text": "Max. AC Output Current (A) 25/24 6.7/6.4",
+    "text": "AC Output Side",
     "bbox": [
-      49.48037160000001,
-      238.92346320000001,
-      542.3813630000001,
-      247.4215636
+      206,
+      803,
+      416,
+      831
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.9566666666666667
   },
   {
     "document_id": "source_2",
     "page": 2,
     "block_type": "text",
-    "text": "Rated Output Voltage/Range (V) 220/380V, 230/400V 0.85Un-1.1Un",
+    "text": "Output (kW) Rated AC Active 8 10 12 Power 4 5 6 7 15",
     "bbox": [
-      49.48037160000001,
-      250.705649,
-      435.05707269999994,
-      258.5997818000001
+      209,
+      846,
+      2234,
+      885
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.9592857142857143
+  },
+  {
+    "document_id": "source_2",
+    "page": 2,
+    "block_type": "text",
+    "text": "(kVA) AC Output 8.8 13.2 Max. Apparent Power 4.4 5.5 6.6 77 11 16.5",
+    "bbox": [
+      209,
+      904,
+      2247,
+      933
+    ],
+    "extraction_method": "tesseract",
+    "confidence": 0.9157142857142857
+  },
+  {
+    "document_id": "source_2",
+    "page": 2,
+    "block_type": "text",
+    "text": "(A) | | Current Rated AC Output 6.1/5.8 7.6/7.3 9.1/8.7 10.7/10.2 12.2/11.6 15.2/14.5 18.2/17.4 22.8/21.8",
+    "bbox": [
+      209,
+      946,
+      2284,
+      987
+    ],
+    "extraction_method": "tesseract",
+    "confidence": 0.9266666666666667
+  },
+  {
+    "document_id": "source_2",
+    "page": 2,
+    "block_type": "text",
+    "text": "Output Current | | (A) AC Max. 6.7/6.4 8.4/8 10/9.6 11.7/11.2 13.4/12.8 16.7/16 20/19.2 25/24",
+    "bbox": [
+      209,
+      993,
+      2260,
+      1039
+    ],
+    "extraction_method": "tesseract",
+    "confidence": 0.9073333333333333
+  },
+  {
+    "document_id": "source_2",
+    "page": 2,
+    "block_type": "text",
+    "text": "Voltage/Range (V) Rated Output 220/380V, 230/400V 0.85Un-1.1Un",
+    "bbox": [
+      209,
+      1042,
+      1811,
+      1080
+    ],
+    "extraction_method": "tesseract",
+    "confidence": 0.9185714285714286
   },
   {
     "document_id": "source_2",
@@ -585,55 +285,55 @@
     "block_type": "text",
     "text": "Grid Connection Form 3L/N/PE",
     "bbox": [
-      49.48037160000001,
-      262.4953346,
-      388.2378424,
-      271.0358636000001
+      207,
+      1097,
+      1617,
+      1125
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.945
   },
   {
     "document_id": "source_2",
     "page": 2,
     "block_type": "text",
-    "text": "Rated Output Grid Frequency/Range(Hz) 50/45-55, 60/55-65",
+    "text": "Frequency/Range(Hz) Rated Output Grid 50/45-55, 60/55-65",
     "bbox": [
-      49.4829,
-      274.28996359999996,
-      407.0548406,
-      282.64555400000006
+      209,
+      1145,
+      1694,
+      1176
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.92
   },
   {
     "document_id": "source_2",
     "page": 2,
     "block_type": "text",
-    "text": "Power Factor Adjustment Range 0.8 leading to 0.8 lagging",
+    "text": "Factor Adjustment Power Range 0.8 leading 0.8 lagging to",
     "bbox": [
-      49.4829,
-      285.92215339999996,
-      414.23567299999996,
-      293.7669442
+      209,
+      1190,
+      1725,
+      1227
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.9533333333333333
   },
   {
     "document_id": "source_2",
     "page": 2,
     "block_type": "text",
-    "text": "<3% Total Current Harmonic Distortion THDi",
+    "text": "Total Current Harmonic Distortion THDi <3%",
     "bbox": [
-      49.4829,
-      298.2068258,
-      381.32655059999996,
-      305.7066258
+      206,
+      1245,
+      1588,
+      1268
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.9333333333333332
   },
   {
     "document_id": "source_2",
@@ -641,190 +341,97 @@
     "block_type": "text",
     "text": "DC Injection Current <0.5%ln",
     "bbox": [
-      49.50200680000012,
-      309.5110934,
-      387.3604970000001,
-      317.3558842
+      209,
+      1293,
+      1612,
+      1322
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
-  },
-  {
-    "document_id": "source_2",
-    "page": 2,
-    "block_type": "table",
-    "text": "Efficiency | ",
-    "bbox": [
-      46.5745,
-      319.64637500000003,
-      555.1301142857143,
-      331.437375
-    ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0,
-    "table": {
-      "table_id": "table_5",
-      "headers": [
-        "Efficiency",
-        ""
-      ],
-      "rows": [],
-      "num_rows": 0,
-      "num_cols": 2,
-      "bbox": [
-        46.5745,
-        319.64637500000003,
-        555.1301142857143,
-        331.437375
-      ],
-      "cells": []
-    }
-  },
-  {
-    "document_id": "source_2",
-    "page": 2,
-    "block_type": "table",
-    "text": "98.2% | 98.3%\n97.6% | 97.8%",
-    "bbox": [
-      237.5154,
-      331.437375,
-      509.7605,
-      355.01862500000004
-    ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0,
-    "table": {
-      "table_id": "table_6",
-      "headers": [
-        "98.2%",
-        "98.3%"
-      ],
-      "rows": [
-        [
-          "97.6%",
-          "97.8%"
-        ]
-      ],
-      "num_rows": 1,
-      "num_cols": 2,
-      "bbox": [
-        237.5154,
-        331.437375,
-        509.7605,
-        355.01862500000004
-      ],
-      "cells": [
-        {
-          "text": "97.6%",
-          "row_idx": 0,
-          "col_idx": 0,
-          "bbox": [
-            237.5154,
-            331.437375,
-            328.2635,
-            343.22687500000006
-          ]
-        },
-        {
-          "text": "97.8%",
-          "row_idx": 0,
-          "col_idx": 1,
-          "bbox": [
-            237.5154,
-            343.22687500000006,
-            328.2635,
-            355.01862500000004
-          ]
-        }
-      ]
-    }
+    "extraction_method": "tesseract",
+    "confidence": 0.94
   },
   {
     "document_id": "source_2",
     "page": 2,
     "block_type": "text",
-    "text": "Max. Efficiency 98.1% 98.5%",
+    "text": "Efficiency",
     "bbox": [
-      49.4888,
-      333.3153636,
-      542.6963546000001,
-      340.8152586
+      208,
+      1344,
+      339,
+      1372
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.96
   },
   {
     "document_id": "source_2",
     "page": 2,
     "block_type": "text",
-    "text": "Euro Efficiency 97.5% 98%",
+    "text": "Efficiency 98.1% 98.2% 98.3% 98.5% Max.",
     "bbox": [
-      49.4888,
-      345.1275486,
-      539.7264338,
-      352.6274436
+      209,
+      1392,
+      2260,
+      1420
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.9433333333333332
   },
   {
     "document_id": "source_2",
     "page": 2,
     "block_type": "text",
-    "text": "MPPT Efficiency >99%",
+    "text": "Efficiency 97.5% 97.6% 97 8% 98% Euro",
     "bbox": [
-      49.50200680000012,
-      357.5323128,
-      383.5205994000001,
-      365.0321128
+      209,
+      1441,
+      2248,
+      1469
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
-  },
-  {
-    "document_id": "source_2",
-    "page": 2,
-    "block_type": "table",
-    "text": "Equipment Protection | ",
-    "bbox": [
-      46.5745,
-      366.809625,
-      555.1301142857143,
-      378.60062500000004
-    ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0,
-    "table": {
-      "table_id": "table_7",
-      "headers": [
-        "Equipment Protection",
-        ""
-      ],
-      "rows": [],
-      "num_rows": 0,
-      "num_cols": 2,
-      "bbox": [
-        46.5745,
-        366.809625,
-        555.1301142857143,
-        378.60062500000004
-      ],
-      "cells": []
-    }
+    "extraction_method": "tesseract",
+    "confidence": 0.8728571428571429
   },
   {
     "document_id": "source_2",
     "page": 2,
     "block_type": "text",
-    "text": "DC Polarity Reverse Connection Protection Yes",
+    "text": "Efficiency >99% MPPT",
     "bbox": [
-      49.50200680000012,
-      380.2942058,
-      380.0106930000001,
-      388.9264756
+      209,
+      1493,
+      1597,
+      1521
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.93
+  },
+  {
+    "document_id": "source_2",
+    "page": 2,
+    "block_type": "text",
+    "text": "Equipment Protection",
+    "bbox": [
+      208,
+      1539,
+      502,
+      1567
+    ],
+    "extraction_method": "tesseract",
+    "confidence": 0.96
+  },
+  {
+    "document_id": "source_2",
+    "page": 2,
+    "block_type": "text",
+    "text": "DC Polarity Connection Protection Reverse Yes",
+    "bbox": [
+      209,
+      1588,
+      1582,
+      1616
+    ],
+    "extraction_method": "tesseract",
+    "confidence": 0.9583333333333333
   },
   {
     "document_id": "source_2",
@@ -832,13 +439,13 @@
     "block_type": "text",
     "text": "AC Output Overcurrent Protection Yes",
     "bbox": [
-      49.50200680000012,
-      392.3763836,
-      380.0106930000001,
-      399.8761836
+      206,
+      1638,
+      1582,
+      1666
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.9520000000000001
   },
   {
     "document_id": "source_2",
@@ -846,13 +453,13 @@
     "block_type": "text",
     "text": "AC Output Overvoltage Protection Yes",
     "bbox": [
-      49.50200680000012,
-      404.1660692,
-      380.0106930000001,
-      411.6658692
+      206,
+      1687,
+      1582,
+      1716
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.9420000000000001
   },
   {
     "document_id": "source_2",
@@ -860,13 +467,13 @@
     "block_type": "text",
     "text": "AC Output Short Circuit Protection Yes",
     "bbox": [
-      49.4888,
-      415.9491636,
-      379.99748619999997,
-      423.4489636
+      206,
+      1736,
+      1582,
+      1764
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.9583333333333333
   },
   {
     "document_id": "source_2",
@@ -874,27 +481,27 @@
     "block_type": "text",
     "text": "Thermal Protection Yes",
     "bbox": [
-      49.48879999999997,
-      427.79884760000004,
-      379.99748619999997,
-      435.6376834
+      206,
+      1786,
+      1582,
+      1810
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.96
   },
   {
     "document_id": "source_2",
     "page": 2,
     "block_type": "text",
-    "text": "Yes DC Terminal Insulation Impedance Monitoring",
+    "text": "DC Terminal Insulation Impedance Monitoring Yes",
     "bbox": [
-      49.4888,
-      439.6050776,
-      379.99748619999997,
-      447.10806360000004
+      209,
+      1835,
+      1582,
+      1864
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.96
   },
   {
     "document_id": "source_2",
@@ -902,55 +509,55 @@
     "block_type": "text",
     "text": "DC Component Monitoring Yes",
     "bbox": [
-      49.4888,
-      451.37976360000005,
-      379.99748619999997,
-      459.21705460000004
+      209,
+      1884,
+      1582,
+      1913
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.955
   },
   {
     "document_id": "source_2",
     "page": 2,
     "block_type": "text",
-    "text": "Yes Ground Fault Current Monitoring",
+    "text": "Ground Fault Current Monitoring Yes",
     "bbox": [
-      49.4888,
-      463.1619494,
-      379.5774973999999,
-      470.6692492
+      207,
+      1933,
+      1580,
+      1962
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.956
   },
   {
     "document_id": "source_2",
     "page": 2,
     "block_type": "text",
-    "text": "Power Network Monitoring Yes",
+    "text": "Network Monitoring Power Yes",
     "bbox": [
-      49.4888,
-      475.4691212,
-      379.98248659999996,
-      483.313912
+      209,
+      1984,
+      1582,
+      2013
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.9625
   },
   {
     "document_id": "source_2",
     "page": 2,
     "block_type": "text",
-    "text": "Yes Island Protection Monitoring",
+    "text": "Island Protection Monitoring Yes",
     "bbox": [
-      49.4888,
-      486.81631860000005,
-      379.99748619999997,
-      494.4661146
+      209,
+      2032,
+      1582,
+      2061
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.9475
   },
   {
     "document_id": "source_2",
@@ -958,86 +565,69 @@
     "block_type": "text",
     "text": "Earth Fault Detection Yes",
     "bbox": [
-      49.4888,
-      499.175989,
-      379.99748619999997,
-      506.9532816
+      209,
+      2083,
+      1582,
+      2107
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.96
   },
   {
     "document_id": "source_2",
     "page": 2,
     "block_type": "text",
-    "text": "Overvoltage Load Drop Protection Yes",
+    "text": "Overvoltage Load Protection Drop Yes",
     "bbox": [
-      49.4946,
-      510.8436636,
-      379.9882866,
-      518.6809546
+      207,
+      2132,
+      1582,
+      2161
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.95
   },
   {
     "document_id": "source_2",
     "page": 2,
     "block_type": "text",
-    "text": "Yes Residual Current (RCD) Detection",
+    "text": "(RCD) Residual Current Detection Yes",
     "bbox": [
-      49.4946,
-      522.1833612,
-      380.0032862,
-      529.840657
+      209,
+      2179,
+      1582,
+      2208
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.96
   },
   {
     "document_id": "source_2",
     "page": 2,
     "block_type": "text",
-    "text": "Surge Protection Level TYPE II(DC), TYPE II(AC)",
+    "text": "Surge Protection Level II(DC), II(AC) TYPE TYPE",
     "bbox": [
-      49.4946,
-      534.5430316,
-      414.71986039999996,
-      542.3203242
+      207,
+      2230,
+      1726,
+      2260
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.8614285714285714
   },
   {
     "document_id": "source_2",
     "page": 2,
-    "block_type": "table",
-    "text": "Interface | ",
+    "block_type": "text",
+    "text": "Interface",
     "bbox": [
-      46.5745,
-      543.67285,
-      555.1301142857143,
-      555.46385
+      208,
+      2278,
+      327,
+      2301
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0,
-    "table": {
-      "table_id": "table_8",
-      "headers": [
-        "Interface",
-        ""
-      ],
-      "rows": [],
-      "num_rows": 0,
-      "num_cols": 2,
-      "bbox": [
-        46.5745,
-        543.67285,
-        555.1301142857143,
-        555.46385
-      ],
-      "cells": []
-    }
+    "extraction_method": "tesseract",
+    "confidence": 0.96
   },
   {
     "document_id": "source_2",
@@ -1045,72 +635,41 @@
     "block_type": "text",
     "text": "Communication Interface RS485/RS232 /WiFi/LAN",
     "bbox": [
-      49.4946,
-      557.5506636,
-      415.99482639999997,
-      565.0504636000001
+      207,
+      2326,
+      1731,
+      2350
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
-  },
-  {
-    "document_id": "source_2",
-    "page": 2,
-    "block_type": "table",
-    "text": "GWeenigehrat l( kDga)ta | 4.8",
-    "bbox": [
-      46.5745,
-      567.252925,
-      555.1301142857143,
-      579.0439250000001
-    ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0,
-    "table": {
-      "table_id": "table_9",
-      "headers": [
-        "GWeenigehrat l( kDga)ta",
-        "4.8"
-      ],
-      "rows": [],
-      "num_rows": 0,
-      "num_cols": 2,
-      "bbox": [
-        46.5745,
-        567.252925,
-        555.1301142857143,
-        579.0439250000001
-      ],
-      "cells": []
-    }
+    "extraction_method": "tesseract",
+    "confidence": 0.8925
   },
   {
     "document_id": "source_2",
     "page": 2,
     "block_type": "text",
-    "text": "Operating Temperature Range (\u00b0C) -25 to +60 , >45 Derating",
+    "text": "General Data",
     "bbox": [
-      49.4946,
-      580.9950384,
-      421.9772217,
-      588.6354818
+      207,
+      2376,
+      382,
+      2399
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.96
   },
   {
     "document_id": "source_2",
     "page": 2,
     "block_type": "text",
-    "text": "\u2103 \u2103",
+    "text": "Operating Temperature (\u00b0C) +60\u00b0C, >45\u00b0C Range -25 Derating to",
     "bbox": [
-      360.3205438,
-      587.6304952,
-      391.4076293,
-      595.1303952000001
+      207,
+      2419,
+      1758,
+      2457
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.9266666666666667
   },
   {
     "document_id": "source_2",
@@ -1118,111 +677,111 @@
     "block_type": "text",
     "text": "Permissible Ambient Humidity 0-100%",
     "bbox": [
-      49.4946,
-      592.8147232,
-      386.9891094,
-      600.4293636
+      209,
+      2473,
+      1611,
+      2501
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.9375
   },
   {
     "document_id": "source_2",
     "page": 2,
     "block_type": "text",
-    "text": "Permissible Altitude (m) 4000m",
+    "text": "(m) Permissible Altitude 4000m",
     "bbox": [
-      49.4946,
-      604.634408,
-      385.8213859,
-      612.3776818
+      209,
+      2522,
+      1606,
+      2551
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.9225
   },
   {
     "document_id": "source_2",
     "page": 2,
     "block_type": "text",
-    "text": "<45 Noise (dB)",
+    "text": "(dB) Noise <45",
     "bbox": [
-      49.4946,
-      616.5155636,
-      380.565752,
-      624.1113886
+      209,
+      2571,
+      1584,
+      2600
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.94
   },
   {
     "document_id": "source_2",
     "page": 2,
     "block_type": "text",
-    "text": "IP 65 Ingress Protection(IP) Rating",
+    "text": "Protection(IP) Rating IP 65 Ingress",
     "bbox": [
-      49.4946,
-      628.3065926,
-      382.55321819999995,
-      635.90389
+      209,
+      2621,
+      1592,
+      2651
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.6940000000000001
   },
   {
     "document_id": "source_2",
     "page": 2,
     "block_type": "text",
-    "text": "Inverter Topology Non-Isolated",
+    "text": "Inverter Topology Non-lIsolated",
     "bbox": [
-      49.4946,
-      640.0737788,
-      394.8078913999999,
-      647.603578
+      209,
+      2666,
+      1643,
+      2703
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.81
   },
   {
     "document_id": "source_2",
     "page": 2,
     "block_type": "text",
-    "text": "Over Voltage Category OVC II(DC), OVC III(AC)",
+    "text": "Over II(DC), III(AC) Voltage Category OVC OVC",
     "bbox": [
-      49.4946,
-      651.8934636,
-      413.9923797999999,
-      659.3932636000001
+      207,
+      2714,
+      1723,
+      2752
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.6628571428571429
   },
   {
     "document_id": "source_2",
     "page": 2,
     "block_type": "text",
-    "text": "Cabinet Size (WxHxD mm) 283\u00d7463\u00d7178 (Excluding Connectors and Brackets)",
+    "text": "(WxHxD mm) Cabinet Size (Excluding Brackets) 283x463x178 Connectors and",
     "bbox": [
-      49.4946,
-      663.5935818,
-      458.8261842,
-      671.330674
+      207,
+      2767,
+      1909,
+      2798
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.9488888888888889
   },
   {
     "document_id": "source_2",
     "page": 2,
     "block_type": "text",
-    "text": "Weight (kg) 11",
+    "text": "(kg) Weight 11",
     "bbox": [
-      49.4946,
-      675.4705636,
-      378.3908291999999,
-      682.9703636
+      206,
+      2817,
+      1575,
+      2847
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.9466666666666668
   },
   {
     "document_id": "source_2",
@@ -1230,55 +789,69 @@
     "block_type": "text",
     "text": "Warranty 5 Years",
     "bbox": [
-      49.4946,
-      687.2368788,
-      386.3031182,
-      694.7666780000001
+      206,
+      2864,
+      1608,
+      2899
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.95
   },
   {
     "document_id": "source_2",
     "page": 2,
     "block_type": "text",
-    "text": "Type of Cooling Natural Cooling",
+    "text": "of Cooling Natural Cooling Type",
     "bbox": [
-      49.4946,
-      699.0565636,
-      400.01275260000006,
-      706.5563636
+      206,
+      2916,
+      1666,
+      2945
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.948
   },
   {
     "document_id": "source_2",
     "page": 2,
     "block_type": "text",
-    "text": "IEC 61727, IEC 62116, CEI 0-21, EN 50549, NRS 097, RD 140, UNE 217002, Grid Regulation",
+    "text": "CEI 0-21, IEC 61727, IEC 62116, 50549, NRS 097, 140, 217002, EN RD UNE",
     "bbox": [
-      49.4946,
-      710.8760674,
-      497.7801453999998,
-      722.2682636000001
+      1040,
+      2960,
+      2073,
+      3011
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.8978571428571429
   },
   {
     "document_id": "source_2",
     "page": 2,
     "block_type": "text",
-    "text": "OVE-Richtlinie R25, G99, VDE-AR-N 4105",
+    "text": "Grid Regulation",
     "bbox": [
-      304.4728004,
-      719.8758274,
-      443.6090899999999,
-      727.3756274
+      207,
+      2982,
+      408,
+      3011
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.96
+  },
+  {
+    "document_id": "source_2",
+    "page": 2,
+    "block_type": "text",
+    "text": "OVE-Richtlinie R25, G99, 4105 VDE-AR-N",
+    "bbox": [
+      1270,
+      3003,
+      1847,
+      3030
+    ],
+    "extraction_method": "tesseract",
+    "confidence": 0.9179999999999999
   },
   {
     "document_id": "source_2",
@@ -1286,40 +859,40 @@
     "block_type": "text",
     "text": "Safety EMC/Standard IEC/EN 61000-6-1/2/3/4, IEC/EN 62109-1, IEC/EN 62109-2",
     "bbox": [
-      49.4946,
-      730.8330352,
-      473.4357945999998,
-      738.3328352
+      207,
+      3048,
+      1972,
+      3076
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.91
   },
   {
     "document_id": "source_2",
     "page": 2,
     "block_type": "text",
-    "text": "Ningbo Deye Inverter Technology Co., Ltd.",
+    "text": "LWeye Ningbo Technology Ltd. Deye Inverter Co.,",
     "bbox": [
-      113.9448,
-      776.155811,
-      292.7393847,
-      785.644811
+      192,
+      3231,
+      1219,
+      3321
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.8557142857142856
   },
   {
     "document_id": "source_2",
     "page": 2,
     "block_type": "text",
-    "text": "Add: No. 26 South YongJiang Road, Daqi, Beilun, NingBo, Zhejiang, China. | Tel: 0086-0574-86120560 | E-mail: market@deye.com.cn",
+    "text": "| | Add: No. 26 South YongJiang Road, Daqi, Beilun, NingBo, Zhejiang, China. Tel: 0086-0574-86120560 E-mail: market@deye.com.cn",
     "bbox": [
-      113.9448,
-      786.9673,
-      570.1528180000003,
-      793.9673
+      475,
+      3282,
+      2375,
+      3309
     ],
-    "extraction_method": "pdfplumber",
-    "confidence": 1.0
+    "extraction_method": "tesseract",
+    "confidence": 0.91
   }
 ]

@@ -111,6 +111,8 @@ def call_llm(
         data = resp.json()
 
     raw = data["choices"][0]["message"]["content"]
+    if raw is None:
+        raise ValueError("LLM returned empty response")
     return _parse_json_response(raw)
 
 

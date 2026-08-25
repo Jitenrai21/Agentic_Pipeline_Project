@@ -130,117 +130,80 @@ class ExtractionOutput(BaseModel):
     )
 
 
-#  Import checklist field mapping 
-# Based on the assessment's "import-side checklist"
+# ── Simplified Import Checklist ─────────────────────────────────────
+# Focused on 4 core categories from the assessment
+
 IMPORT_CHECKLIST = {
     "product_identity": [
         "product.model",
         "product.variant",
         "product.rated_power",
         "product.max_pv_input_power",
-        "product.mppt_voltage_range",
         "product.max_pv_input_voltage",
+        "product.mppt_voltage_range",
+        "product.rated_output_power",
         "product.rated_output_voltage",
-        "product.rated_grid_frequency",
-        "product.num_mppt_trackers",
-        "product.num_strings_per_mppt",
+        "product.grid_frequency",
         "product.max_efficiency",
         "product.euro_efficiency",
-        "product.mppt_efficiency",
-        "product.topology",
         "product.weight",
-        "product.dimensions",
         "product.ip_rating",
-        "product.operating_temperature",
-        "product.noise",
-        "product.cooling",
-        "product.warranty",
     ],
     "manufacturer_identity": [
         "manufacturer.legal_name",
         "manufacturer.factory_address",
         "manufacturer.country",
-        "manufacturer.phone",
-        "manufacturer.email",
-        "manufacturer.stock_code",
     ],
     "test_evidence": [
         "compliance.grid_standards",
         "compliance.safety_emc_standards",
-        "compliance.certificates",
     ],
     "labeling": [
-        "labeling.required_markings",
-    ],
-    "importer_paperwork": [
-        "importer.sunbridge_checklist",
+        "labeling.model_on_label",
+        "labeling.ratings_on_label",
+        "labeling.manufacturer_on_label",
+        "labeling.origin_on_label",
+        "labeling.protection_rating_on_label",
     ],
 }
 
 
-#  Expected fields
+# ── Core fields for import review ───────────────────────────────────
+# Only fields we can extract from the datasheets
+
 TASK1_FIELDS = [
     # Product identity
     "product.model",
     "product.variant",
     "product.rated_power",
     "product.max_pv_input_power",
-    "product.mppt_voltage_range",
     "product.max_pv_input_voltage",
+    "product.mppt_voltage_range",
     "product.startup_voltage",
-    "product.rated_input_voltage",
-    "product.max_input_current",
-    "product.max_short_circuit_current",
     "product.rated_output_power",
-    "product.max_output_apparent_power",
     "product.rated_output_current",
-    "product.max_output_current",
     "product.rated_output_voltage",
     "product.grid_frequency",
-    "product.num_mppt_trackers",
-    "product.num_strings_per_mppt",
     "product.max_efficiency",
     "product.euro_efficiency",
-    "product.mppt_efficiency",
-    "product.thd_current",
-    "product.power_factor_range",
-    "product.dc_injection_current",
-    "product.topology",
     "product.weight",
-    "product.dimensions",
     "product.ip_rating",
     "product.operating_temperature",
-    "product.permitted_humidity",
-    "product.permitted_altitude",
-    "product.noise",
-    "product.cooling",
     "product.warranty",
-    "product.overvoltage_category",
+    "product.topology",
     # Manufacturer
     "manufacturer.legal_name",
     "manufacturer.factory_address",
     "manufacturer.country",
-    "manufacturer.phone",
-    "manufacturer.email",
-    "manufacturer.stock_code",
     # Compliance
     "compliance.grid_standards",
     "compliance.safety_emc_standards",
     "compliance.surge_protection",
-    # Protection features
+    # Protection
     "protection.dc_reverse_polarity",
     "protection.ac_short_circuit",
-    "protection.ac_overcurrent",
-    "protection.ac_overvoltage",
     "protection.thermal",
     "protection.islanding",
-    "protection.ground_fault",
-    "protection.insulation_impedance",
-    "protection.dc_switch",
-    # Labeling
-    "labeling.required_markings",
-    # Importer
-    "importer.sunbridge_checklist",
 ]
 
 
