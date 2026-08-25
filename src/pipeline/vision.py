@@ -95,7 +95,7 @@ def extract_with_vision(image_path: Path) -> dict:
             },
         ],
         temperature=0.1,
-        max_completion_tokens=8192,
+        max_completion_tokens=4096,
     )
 
     raw = completion.choices[0].message.content
@@ -125,7 +125,7 @@ Return this exact JSON structure:
             },
         ],
         temperature=0.1,
-        max_completion_tokens=8192,
+        max_completion_tokens=4096,
     )
 
     raw = completion.choices[0].message.content

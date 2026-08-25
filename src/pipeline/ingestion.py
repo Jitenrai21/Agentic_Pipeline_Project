@@ -1,24 +1,23 @@
 from __future__ import annotations
 
-import io
 from dataclasses import dataclass, field
 from pathlib import Path
 
 import pdfplumber
-from PIL import Image
+import pytesseract
+from PIL import Image, ImageEnhance
 
-from .config import TEXT_LAYER_MIN_CHARS, CONFIDENCE_MEDIUM, FORCE_VISION
-from .vision import extract_with_vision
+from .config import TEXT_LAYER_MIN_CHARS, CONFIDENCE_MEDIUM
 
 
-#  Data classes 
+# ── Data classes ────────────────────────────────────────────────────
 
 @dataclass
 class ExtractedTable:
     id: str
     headers: list[str]
     rows: list[list[str]]
-    source_method: str  # "pdfplumber" | "vision_llm"
+    source_method: str  # "pdfplumber" | "tesseract"
     confidence: float
     page_number: int
 
@@ -29,18 +28,17 @@ class PageData:
     raw_text: str
     tables: list[ExtractedTable] = field(default_factory=list)
     words: list[dict] = field(default_factory=list)
-    extraction_method: str = "text"  # "text" | "ocr" | "vision"
+    extraction_method: str = "text"  # "text" | "ocr"
     confidence: float = 0.0
 
 
-#  Source classification 
+# ── Source classification ───────────────────────────────────────────
 
 IMAGE_EXTENSIONS = {".png", ".jpg", ".jpeg", ".tiff", ".bmp", ".webp"}
 PDF_EXTENSIONS = {".pdf", ".pdfa"}
 
 
 def classify_source(file_path: Path) -> str:
-    """Return 'pdf' or 'image' based on file extension."""
     ext = file_path.suffix.lower()
     if ext in PDF_EXTENSIONS:
         return "pdf"
@@ -49,13 +47,9 @@ def classify_source(file_path: Path) -> str:
     raise ValueError(f"Unsupported file type: {ext}")
 
 
-#  Text layer detection 
+# ── Text layer detection ───────────────────────────────────────────
 
 def has_text_layer(pdf_path: Path, sample_pages: int = 2) -> bool:
-    """
-    Check if PDF has extractable text.
-    Returns False if pages are mostly empty (scanned images).
-    """
     with pdfplumber.open(pdf_path) as pdf:
         pages_to_check = min(sample_pages, len(pdf.pages))
         total_chars = 0
@@ -65,20 +59,14 @@ def has_text_layer(pdf_path: Path, sample_pages: int = 2) -> bool:
     return total_chars >= TEXT_LAYER_MIN_CHARS
 
 
-#  PDF parsing (text layer exists) 
+# ── PDF parsing (text layer exists) ────────────────────────────────
 
 def parse_pdf(pdf_path: Path) -> list[PageData]:
-    """
-    Extract text, tables, and word coordinates from a text-based PDF.
-    """
     results = []
-
     with pdfplumber.open(pdf_path) as pdf:
         for page_num, page in enumerate(pdf.pages, start=1):
-            # Full text
             raw_text = page.extract_text() or ""
 
-            # Words with coordinates
             words = []
             for w in page.extract_words() or []:
                 words.append({
@@ -89,23 +77,18 @@ def parse_pdf(pdf_path: Path) -> list[PageData]:
                     "y1": w["bottom"],
                 })
 
-            # Tables
             tables = []
             extracted_tables = page.extract_tables() or []
             for idx, table_data in enumerate(extracted_tables):
                 if not table_data or len(table_data) < 2:
                     continue
-
                 headers = [str(c) if c else "" for c in table_data[0]]
                 rows = []
                 for row in table_data[1:]:
                     rows.append([str(c) if c else "" for c in row])
 
-                # Confidence heuristic: more complete rows = higher confidence
                 total_cells = len(rows) * len(headers)
-                filled_cells = sum(
-                    1 for r in rows for c in r if c.strip()
-                )
+                filled_cells = sum(1 for r in rows for c in r if c.strip())
                 confidence = filled_cells / total_cells if total_cells > 0 else 0.0
 
                 tables.append(ExtractedTable(
@@ -117,12 +100,9 @@ def parse_pdf(pdf_path: Path) -> list[PageData]:
                     page_number=page_num,
                 ))
 
-            # Page-level confidence
             text_conf = min(len(raw_text) / 200, 1.0) if raw_text else 0.0
             table_conf = (
-                sum(t.confidence for t in tables) / len(tables)
-                if tables
-                else 0.0
+                sum(t.confidence for t in tables) / len(tables) if tables else 0.0
             )
             confidence = 0.6 * text_conf + 0.4 * table_conf if tables else text_conf
 
@@ -134,157 +114,139 @@ def parse_pdf(pdf_path: Path) -> list[PageData]:
                 extraction_method="text",
                 confidence=confidence,
             ))
-
     return results
 
 
-#  Image-based OCR via Vision LLM 
+# ── OCR fallback (Tesseract) ───────────────────────────────────────
 
 def _pdf_page_to_image(pdf_path: Path, page_number: int) -> Image.Image:
-    """
-    Render a single PDF page to a PIL Image with enhanced contrast.
-    """
-    from PIL import ImageEnhance
-
     with pdfplumber.open(pdf_path) as pdf:
         page = pdf.pages[page_number - 1]
         im = page.to_image(resolution=300)
         img = im.original
-
-        # Enhance contrast and brightness for better OCR
-        enhancer = ImageEnhance.Contrast(img)
-        img = enhancer.enhance(1.5)
-
-        enhancer = ImageEnhance.Brightness(img)
-        img = enhancer.enhance(1.2)
-
+        img = ImageEnhance.Contrast(img).enhance(1.5)
+        img = ImageEnhance.Brightness(img).enhance(1.2)
         return img
 
 
-def parse_with_vision(pdf_path: Path) -> list[PageData]:
-    """
-    Fallback: render each PDF page to image, then use Groq Vision.
-    """
-    results = []
+def _image_to_text(img: Image.Image) -> str:
+    custom_config = r"--oem 3 --psm 6"
+    text = pytesseract.image_to_string(img, config=custom_config)
+    return text
 
+
+def _image_to_data(img: Image.Image) -> dict:
+    data = pytesseract.image_to_data(img, output_type=pytesseract.Output.DICT)
+    return data
+
+
+def _cluster_words_from_ocr(data: dict) -> list[dict]:
+    words = []
+    for i in range(len(data["text"])):
+        text = data["text"][i].strip()
+        conf = int(data["conf"][i])
+        if text and conf > 0:
+            words.append({
+                "text": text,
+                "x0": data["left"][i],
+                "y0": data["top"][i],
+                "x1": data["left"][i] + data["width"][i],
+                "y1": data["top"][i] + data["height"][i],
+                "conf": conf,
+            })
+    return words
+
+
+def _words_to_text(words: list[dict]) -> str:
+    sorted_words = sorted(words, key=lambda w: (w["y0"], w["x0"]))
+    lines = []
+    current_line = []
+    current_y = None
+
+    for w in sorted_words:
+        if current_y is None or abs(w["y0"] - current_y) > 5:
+            if current_line:
+                lines.append(" ".join(current_line))
+            current_line = [w["text"]]
+            current_y = w["y0"]
+        else:
+            current_line.append(w["text"])
+
+    if current_line:
+        lines.append(" ".join(current_line))
+
+    return "\n".join(lines)
+
+
+def parse_with_ocr(pdf_path: Path) -> list[PageData]:
+    results = []
     with pdfplumber.open(pdf_path) as pdf:
         total_pages = len(pdf.pages)
 
     for page_num in range(1, total_pages + 1):
-        print(f"  Vision extraction: page {page_num}/{total_pages}")
-
-        # Render page to image
+        print(f"  OCR extraction: page {page_num}/{total_pages}")
         img = _pdf_page_to_image(pdf_path, page_num)
+        text = _image_to_text(img)
+        ocr_data = _image_to_data(img)
+        words = _cluster_words_from_ocr(ocr_data)
 
-        # Save to temp buffer
-        buf = io.BytesIO()
-        img.save(buf, format="PNG")
-        buf.seek(0)
-
-        # Save temp file for vision
-        tmp_path = Path(f"_tmp_page_{page_num}.png")
-        tmp_path.write_bytes(buf.read())
-
-        try:
-            vision_result = extract_with_vision(tmp_path)
-        finally:
-            tmp_path.unlink(missing_ok=True)
-
-        # Parse vision output into PageData
-        raw_text = vision_result.get("page_text", "")
-        tables = []
-        for idx, tbl in enumerate(vision_result.get("tables", [])):
-            tables.append(ExtractedTable(
-                id=f"table_{idx + 1}",
-                headers=tbl.get("headers", []),
-                rows=tbl.get("rows", []),
-                source_method="vision_llm",
-                confidence=CONFIDENCE_MEDIUM,
-                page_number=page_num,
-            ))
+        words_conf = [w["conf"] for w in words] if words else [0]
+        avg_conf = sum(words_conf) / len(words_conf) / 100.0
 
         results.append(PageData(
             page_number=page_num,
-            raw_text=raw_text,
-            tables=tables,
-            extraction_method="vision",
-            confidence=CONFIDENCE_MEDIUM,
+            raw_text=text,
+            tables=[],
+            words=words,
+            extraction_method="ocr",
+            confidence=avg_conf,
         ))
-
     return results
 
 
-#  Main ingestion entry point 
+def ocr_image_file(image_path: Path) -> list[PageData]:
+    img = Image.open(image_path)
+    text = _image_to_text(img)
+    ocr_data = _image_to_data(img)
+    words = _cluster_words_from_ocr(ocr_data)
+
+    words_conf = [w["conf"] for w in words] if words else [0]
+    avg_conf = sum(words_conf) / len(words_conf) / 100.0
+
+    return [PageData(
+        page_number=1,
+        raw_text=text,
+        tables=[],
+        words=words,
+        extraction_method="ocr",
+        confidence=avg_conf,
+    )]
+
+
+# ── Main ingestion entry point ─────────────────────────────────────
 
 def ingest_document(pdf_path: Path) -> list[PageData]:
-    """
-    Classify → Check text layer → Parse or OCR → Return structured data.
-    """
     source_type = classify_source(pdf_path)
     print(f"Source type: {source_type}")
 
     if source_type == "image":
-        print("Image detected — using vision extraction")
-        img = Image.open(pdf_path)
-        return [_image_to_pagedata(img, 1, pdf_path.name)]
+        print("Image detected -- using OCR extraction")
+        return ocr_image_file(pdf_path)
 
-    # FORCE_VISION mode: skip pdfplumber, go straight to vision
-    if FORCE_VISION:
-        print("FORCE_VISION=True — using vision extraction for all pages")
-        return parse_with_vision(pdf_path)
-
-    # PDF path
     if has_text_layer(pdf_path):
-        print("Text layer detected — using pdfplumber")
+        print("Text layer detected -- using pdfplumber")
         pages = parse_pdf(pdf_path)
 
-        # Check if any page has low confidence → trigger vision fallback
         low_conf_pages = [p for p in pages if p.confidence < CONFIDENCE_MEDIUM]
         if low_conf_pages:
-            print(f"  {len(low_conf_pages)} pages have low confidence — vision fallback")
-            vision_pages = parse_with_vision(pdf_path)
-            # Merge: keep pdfplumber for good pages, vision for bad ones
-            for vp in vision_pages:
-                idx = vp.page_number - 1
+            print(f"  {len(low_conf_pages)} pages have low confidence -- OCR fallback")
+            ocr_pages = parse_with_ocr(pdf_path)
+            for op in ocr_pages:
+                idx = op.page_number - 1
                 if pages[idx].confidence < CONFIDENCE_MEDIUM:
-                    pages[idx] = vp
+                    pages[idx] = op
     else:
-        print("No text layer — using vision extraction")
-        pages = parse_with_vision(pdf_path)
+        print("No text layer -- using OCR extraction")
+        pages = parse_with_ocr(pdf_path)
 
     return pages
-
-
-def _image_to_pagedata(img: Image.Image, page_number: int, source_name: str = "") -> PageData:
-    """Convert a PIL Image to PageData using vision extraction."""
-    buf = io.BytesIO()
-    img.save(buf, format="PNG")
-    buf.seek(0)
-
-    tmp_path = Path(f"_tmp_img_{page_number}.png")
-    tmp_path.write_bytes(buf.read())
-
-    try:
-        vision_result = extract_with_vision(tmp_path)
-    finally:
-        tmp_path.unlink(missing_ok=True)
-
-    raw_text = vision_result.get("page_text", "")
-    tables = []
-    for idx, tbl in enumerate(vision_result.get("tables", [])):
-        tables.append(ExtractedTable(
-            id=f"table_{idx + 1}",
-            headers=tbl.get("headers", []),
-            rows=tbl.get("rows", []),
-            source_method="vision_llm",
-            confidence=CONFIDENCE_MEDIUM,
-            page_number=page_number,
-        ))
-
-    return PageData(
-        page_number=page_number,
-        raw_text=raw_text,
-        tables=tables,
-        extraction_method="vision",
-        confidence=CONFIDENCE_MEDIUM,
-    )
