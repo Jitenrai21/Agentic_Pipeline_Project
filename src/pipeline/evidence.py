@@ -73,7 +73,6 @@ def load_all_pages(document_id: str) -> list[PageData]:
 
 
 #  EvidenceBlock storage 
-
 def _block_to_dict(block: EvidenceBlock) -> dict:
     return block.to_dict()
 

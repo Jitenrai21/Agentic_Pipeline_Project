@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-08-25T22:31:43.057240",
+    "generated_at": "2026-08-31T08:14:13.862053",
     "task": "task1_nepal",
     "requested_model": "SUN-5K-G06P3",
     "sources": {
@@ -16,9 +16,9 @@
   },
   "summary": {
     "total_fields": 28,
-    "agreements": 3,
+    "agreements": 2,
     "conflicts": 4,
-    "source_only": 14,
+    "source_only": 15,
     "missing": 7,
     "llm_calls": 0
   },
@@ -96,7 +96,7 @@
     "product.max_pv_input_power": {
       "status": "source_only",
       "value_a": null,
-      "value_b": "6.5 kW",
+      "value_b": "7.8 kW",
       "variant_a": null,
       "variant_b": "AM2",
       "confidence": 0.9,
@@ -132,7 +132,7 @@
     "product.rated_output_power": {
       "status": "source_only",
       "value_a": null,
-      "value_b": "5 kW",
+      "value_b": "6 kW",
       "variant_a": null,
       "variant_b": "AM2",
       "confidence": 0.9,
@@ -141,7 +141,7 @@
     "product.rated_output_current": {
       "status": "source_only",
       "value_a": null,
-      "value_b": "7.6/7.3 A",
+      "value_b": "9.1/8.7 A",
       "variant_a": null,
       "variant_b": "AM2",
       "confidence": 0.9,
@@ -166,18 +166,18 @@
       "notes": "Only found in AM2"
     },
     "product.max_efficiency": {
-      "status": "verified",
-      "value_a": "98.2%",
-      "value_b": "98.2%",
-      "variant_a": "AM2-P1",
+      "status": "source_only",
+      "value_a": null,
+      "value_b": "98.3%",
+      "variant_a": null,
       "variant_b": "AM2",
-      "confidence": 0.95,
-      "notes": "Exact match"
+      "confidence": 0.9,
+      "notes": "Only found in AM2"
     },
     "product.euro_efficiency": {
       "status": "conflict",
       "value_a": "97.5%",
-      "value_b": "97.6%",
+      "value_b": "97.8%",
       "variant_a": "AM2-P1",
       "variant_b": "AM2",
       "confidence": 0.5,
@@ -195,7 +195,7 @@
     "product.ip_rating": {
       "status": "conflict",
       "value_a": "IP65",
-      "value_b": "IP IP",
+      "value_b": "65 IP",
       "variant_a": "AM2-P1",
       "variant_b": "AM2",
       "confidence": 0.5,
@@ -204,7 +204,7 @@
     "product.operating_temperature": {
       "status": "source_only",
       "value_a": null,
-      "value_b": "to \u00b0C",
+      "value_b": "+60 \u00b0C",
       "variant_a": null,
       "variant_b": "AM2",
       "confidence": 0.9,
@@ -331,7 +331,7 @@
     {
       "field": "product.euro_efficiency",
       "value_a": "97.5%",
-      "value_b": "97.6%",
+      "value_b": "97.8%",
       "variant_a": "AM2-P1",
       "variant_b": "AM2",
       "notes": "Values differ - manual review needed"
@@ -339,7 +339,7 @@
     {
       "field": "product.ip_rating",
       "value_a": "IP65",
-      "value_b": "IP IP",
+      "value_b": "65 IP",
       "variant_a": "AM2-P1",
       "variant_b": "AM2",
       "notes": "Values differ - manual review needed"

@@ -7,7 +7,6 @@ from typing import Optional
 
 from .schemas import TASK1_FIELDS
 from .model_finder import ModelMatch
-from .llm_client import call_llm
 
 
 @dataclass
@@ -105,31 +104,20 @@ def load_cached_ocr(doc_id: str) -> dict:
     return {}
 
 
-def parse_models_from_line(raw_text: str) -> list[str]:
-    """Parse model names from raw text by splitting on spaces."""
-    models = []
-    seen = set()
-    
-    for line in raw_text.split("\n"):
-        for word in line.split():
-            word = word.strip()
-            if "SUN" in word.upper() and "K" in word.upper():
-                if word not in seen:
-                    seen.add(word)
-                    models.append(word)
-    
-    return models
-
-
 def find_column_index(models: list[str], matched_model: str) -> int:
-    """Find column index by matching model finder output with parsed models."""
+    """
+    Find column index by matching model finder output with parsed models.
+    Uses all_models_found from ModelMatch (LLM-based extraction).
+    """
     matched_upper = matched_model.upper().replace("-", "").replace(" ", "")
     
+    # First pass: exact match
     for idx, model in enumerate(models):
         model_upper = model.upper().replace("-", "").replace(" ", "")
         if matched_upper == model_upper:
             return idx
     
+    # Second pass: skip combined models like "SUN-4/5/6/7/8/10/12/15K"
     for idx, model in enumerate(models):
         if "/" in model:
             continue
@@ -262,16 +250,13 @@ def _build_llm_prompt(
     missing_fields: list[str],
 ) -> tuple[str, str]:
     """Build prompts for LLM extraction of missing fields."""
-    # Build fields list
     fields_list = "\n".join(f"- {f}" for f in missing_fields)
-    
-    # Truncate raw text to fit in prompt
     content = raw_text[:2000] if len(raw_text) > 2000 else raw_text
     
     user_prompt = LLM_USER_PROMPT_TEMPLATE.format(
         model_name=model_match.matched_model,
         col_idx=0,
-        models_list=", ".join(["4K", "5K", "6K", "7K", "8K", "10K", "12K", "15K"]),
+        models_list=", ".join(model_match.all_models_found) if hasattr(model_match, 'all_models_found') else "",
         content=content,
         fields_list=fields_list,
     )
@@ -284,6 +269,8 @@ def _parse_llm_response(
     missing_fields: list[str],
 ) -> dict[str, ExtractedValue]:
     """Parse LLM response into ExtractedValue objects."""
+    from .llm_client import call_llm
+    
     results = {}
     
     for field_name in missing_fields:
@@ -326,6 +313,8 @@ def extract_missing_with_llm(
     Use LLM to extract missing fields.
     Returns (extracted_fields, llm_calls_made).
     """
+    from .llm_client import call_llm
+    
     if not missing_fields:
         return {}, 0
     
@@ -342,7 +331,6 @@ def extract_missing_with_llm(
         return llm_results, 1
         
     except Exception as e:
-        # LLM failed - return missing fields with error note
         error_results = {}
         for field_name in missing_fields:
             error_results[field_name] = ExtractedValue(
@@ -365,8 +353,7 @@ def extract_from_cached(
 ) -> ExtractionResult:
     """
     Extract field values from cached data.
-    1. Rule-based extraction (free)
-    2. LLM fallback for missing fields (if enabled)
+    Uses model_match.all_models_found from LLM for column index.
     """
     if pages is None:
         pages = [2]
@@ -389,11 +376,11 @@ def extract_from_cached(
     for page_key, page_info in ocr_data.get("pages", {}).items():
         all_raw_text += page_info.get("raw_text", "") + "\n"
     
-    # Parse models from text
-    models_found = parse_models_from_line(all_raw_text)
+    # Use all_models_found from model finder (LLM-based)
+    models_found = model_match.all_models_found if hasattr(model_match, 'all_models_found') else []
     result.models_found = models_found
     
-    # Find column index
+    # Find column index using model finder output
     if models_found and model_match.matched_model:
         col_idx = find_column_index(models_found, model_match.matched_model)
         result.column_index = col_idx
@@ -415,7 +402,6 @@ def extract_from_cached(
         result.fields.update(llm_fields)
         result.llm_calls_made = llm_calls
         
-        # Update missing list (only fields still missing after LLM)
         result.missing_fields = [
             f for f in missing
             if f in llm_fields and llm_fields[f].source == "missing"
@@ -433,7 +419,6 @@ def print_extraction_result(result: ExtractionResult):
     print(f"  Models found: {result.models_found}")
     print(f"  LLM calls made: {result.llm_calls_made}")
     
-    # Group by source
     table = {k: v for k, v in result.fields.items() if v.source == "table"}
     llm = {k: v for k, v in result.fields.items() if v.source == "llm"}
     merged = {k: v for k, v in result.fields.items() if v.source == "merged"}

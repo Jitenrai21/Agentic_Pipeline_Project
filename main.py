@@ -20,7 +20,7 @@ from src.pipeline.report import generate_json_report, generate_markdown_report
 from src.pipeline.schemas import TASK1_FIELDS
 
 
-# ── State definition ────────────────────────────────────────────────
+# State definition
 
 class PipelineState(TypedDict):
     """State for the pipeline graph."""
@@ -54,14 +54,52 @@ def extract_source_1_node(state: PipelineState) -> PipelineState:
     doc_info = state["pdfs"][doc_id]
     variant = doc_info.get("variant", "")
     
-    model_match = ModelMatch(
-        requested=state["requested_model"],
-        matched_model=state["requested_model"],
-        variant=variant,
-        confidence=0.95,
-        source_document=doc_id,
-    )
+    # Use model finder to get all_models_found
+    from src.pipeline.model_finder import find_target_model
+    from src.pipeline.evidence_layer import extract_evidence_from_page, extract_evidence_from_ocr
+    from src.pipeline.ingestion import parse_pdf, parse_with_ocr
     
+    # Build evidence blocks for model finder
+    pdf_path = doc_info.get("local_path", "")
+    blocks = {}
+    try:
+        pages_pdfplumber = parse_pdf(Path(pdf_path))
+        pages_ocr = parse_with_ocr(Path(pdf_path))
+        
+        import pdfplumber
+        with pdfplumber.open(pdf_path) as pdf:
+            for page_num, page in enumerate(pdf.pages, start=1):
+                pp_blocks = extract_evidence_from_page(
+                    document_id=doc_id,
+                    page_number=page_num,
+                    page=page,
+                    extraction_method="pdfplumber",
+                )
+                blocks[page_num] = pp_blocks
+    except Exception as e:
+        print(f"  Warning: Could not build evidence for model finder: {e}")
+    
+    # Run model finder
+    try:
+        model_match = find_target_model(
+            requested_model=state["requested_model"],
+            document_id=doc_id,
+            blocks=blocks,
+        )
+        print(f"  Model finder: {model_match.matched_model} ({model_match.confidence:.2f})")
+        print(f"  All models found: {model_match.all_models_found}")
+    except Exception as e:
+        print(f"  Model finder failed, using fallback: {e}")
+        model_match = ModelMatch(
+            requested=state["requested_model"],
+            matched_model=state["requested_model"],
+            variant=variant,
+            confidence=0.5,
+            source_document=doc_id,
+            all_models_found=[],
+        )
+    
+    # Extract fields
     result = extract_from_cached(doc_id, model_match, use_llm_fallback=False)
     
     fields_dict = {}
@@ -75,6 +113,7 @@ def extract_source_1_node(state: PipelineState) -> PipelineState:
     state["extractions"][doc_id] = {
         "variant": variant,
         "fields": fields_dict,
+        "model_match": model_match,
     }
     
     extracted_count = sum(1 for v in result.fields.values() if v.source == "table")
@@ -95,14 +134,52 @@ def extract_source_2_node(state: PipelineState) -> PipelineState:
     doc_info = state["pdfs"][doc_id]
     variant = doc_info.get("variant", "")
     
-    model_match = ModelMatch(
-        requested=state["requested_model"],
-        matched_model=state["requested_model"],
-        variant=variant,
-        confidence=0.95,
-        source_document=doc_id,
-    )
+    # Use model finder to get all_models_found
+    from src.pipeline.model_finder import find_target_model
+    from src.pipeline.evidence_layer import extract_evidence_from_page, extract_evidence_from_ocr
+    from src.pipeline.ingestion import parse_pdf, parse_with_ocr
     
+    # Build evidence blocks for model finder
+    pdf_path = doc_info.get("local_path", "")
+    blocks = {}
+    try:
+        pages_pdfplumber = parse_pdf(Path(pdf_path))
+        pages_ocr = parse_with_ocr(Path(pdf_path))
+        
+        import pdfplumber
+        with pdfplumber.open(pdf_path) as pdf:
+            for page_num, page in enumerate(pdf.pages, start=1):
+                pp_blocks = extract_evidence_from_page(
+                    document_id=doc_id,
+                    page_number=page_num,
+                    page=page,
+                    extraction_method="pdfplumber",
+                )
+                blocks[page_num] = pp_blocks
+    except Exception as e:
+        print(f"  Warning: Could not build evidence for model finder: {e}")
+    
+    # Run model finder
+    try:
+        model_match = find_target_model(
+            requested_model=state["requested_model"],
+            document_id=doc_id,
+            blocks=blocks,
+        )
+        print(f"  Model finder: {model_match.matched_model} ({model_match.confidence:.2f})")
+        print(f"  All models found: {model_match.all_models_found}")
+    except Exception as e:
+        print(f"  Model finder failed, using fallback: {e}")
+        model_match = ModelMatch(
+            requested=state["requested_model"],
+            matched_model=state["requested_model"],
+            variant=variant,
+            confidence=0.5,
+            source_document=doc_id,
+            all_models_found=[],
+        )
+    
+    # Extract fields
     result = extract_from_cached(doc_id, model_match, use_llm_fallback=False)
     
     fields_dict = {}
@@ -116,6 +193,7 @@ def extract_source_2_node(state: PipelineState) -> PipelineState:
     state["extractions"][doc_id] = {
         "variant": variant,
         "fields": fields_dict,
+        "model_match": model_match,
     }
     
     extracted_count = sum(1 for v in result.fields.values() if v.source == "table")

@@ -15,7 +15,12 @@ class ModelMatch:
     variant: str
     confidence: float
     source_document: str
+    all_models_found: list[str] = None
     notes: Optional[str] = None
+    
+    def __post_init__(self):
+        if self.all_models_found is None:
+            self.all_models_found = []
 
 
 SYSTEM_PROMPT = """You are a technical document analysis assistant.
@@ -95,12 +100,21 @@ def find_target_model(
         temperature=0.1,
     )
 
+    # Extract all_models_found from LLM response
+    all_models = result.get("all_models_found", [])
+    if not all_models:
+        # Fallback: try to extract from matched_model
+        matched = result.get("matched_model", "")
+        if matched:
+            all_models = [matched]
+
     return ModelMatch(
         requested=result.get("requested", requested_model),
         matched_model=result.get("matched_model", ""),
         variant=result.get("variant", ""),
         confidence=result.get("confidence", 0.0),
         source_document=document_id,
+        all_models_found=all_models,
         notes=result.get("reasoning", ""),
     )
 
