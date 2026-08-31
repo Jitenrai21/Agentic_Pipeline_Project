@@ -36,12 +36,12 @@ class ExtractionResult:
 # ── Schema field to datasheet row label mapping ─────────────────────
 
 FIELD_TO_ROW_LABEL: dict[str, list[str]] = {
-    "product.max_pv_input_power": ["Max. PV Input Power"],
-    "product.max_pv_input_voltage": ["Max. PV Input Voltage"],
-    "product.startup_voltage": ["Start-up Voltage"],
-    "product.mppt_voltage_range": ["MPPT Voltage Range"],
-    "product.rated_output_power": ["Rated AC Output Active Power"],
-    "product.rated_output_current": ["Rated AC Output Current"],
+    "product.max_pv_input_power": ["Max. PV Input Power", "Max. DC Input Power"],
+    "product.max_pv_input_voltage": ["Max. PV Input Voltage", "Max. DC Input Voltage"],
+    "product.startup_voltage": ["Start-up Voltage", "Start-up DC Input Voltage"],
+    "product.mppt_voltage_range": ["MPPT Voltage Range", "MPPT Operating Voltage Range"],
+    "product.rated_output_power": ["Rated AC Output Active Power", "Rated Output Active Power"],
+    "product.rated_output_current": ["Rated AC Output Current", "Rated Output Current"],
     "product.rated_output_voltage": ["Rated Output Voltage/Range", "Rated Output Voltage"],
     "product.grid_frequency": ["Rated Output Grid Frequency/Range", "Rated Output Grid Frequency"],
     "product.max_efficiency": ["Max. Efficiency"],

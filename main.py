@@ -15,6 +15,7 @@ from src.pipeline.config import SOURCES
 from src.pipeline.fetcher import fetch_documents
 from src.pipeline.model_finder import ModelMatch
 from src.pipeline.field_extractor import extract_from_cached
+from src.pipeline.spatial_extractor import extract_from_spatial, print_spatial_result
 from src.pipeline.reconciliation import reconcile_fields, print_reconciliation
 from src.pipeline.report import generate_json_report, generate_markdown_report
 from src.pipeline.schemas import TASK1_FIELDS
@@ -99,8 +100,8 @@ def extract_source_1_node(state: PipelineState) -> PipelineState:
             all_models_found=[],
         )
     
-    # Extract fields
-    result = extract_from_cached(doc_id, model_match, use_llm_fallback=False)
+    # Extract fields using spatial coordinates
+    result = extract_from_spatial(doc_id, model_match, pages=[1, 2])
     
     fields_dict = {}
     for field_name, val in result.fields.items():
@@ -116,8 +117,8 @@ def extract_source_1_node(state: PipelineState) -> PipelineState:
         "model_match": model_match,
     }
     
-    extracted_count = sum(1 for v in result.fields.values() if v.source == "table")
-    print(f"  {doc_id}: {extracted_count} fields extracted")
+    extracted_count = sum(1 for v in result.fields.values() if v.source in ("spatial", "table"))
+    print(f"  {doc_id}: {extracted_count} fields extracted (spatial)")
     
     return state
 
@@ -179,8 +180,8 @@ def extract_source_2_node(state: PipelineState) -> PipelineState:
             all_models_found=[],
         )
     
-    # Extract fields
-    result = extract_from_cached(doc_id, model_match, use_llm_fallback=False)
+    # Extract fields using spatial coordinates
+    result = extract_from_spatial(doc_id, model_match, pages=[1, 2])
     
     fields_dict = {}
     for field_name, val in result.fields.items():
@@ -196,8 +197,8 @@ def extract_source_2_node(state: PipelineState) -> PipelineState:
         "model_match": model_match,
     }
     
-    extracted_count = sum(1 for v in result.fields.values() if v.source == "table")
-    print(f"  {doc_id}: {extracted_count} fields extracted")
+    extracted_count = sum(1 for v in result.fields.values() if v.source in ("spatial", "table"))
+    print(f"  {doc_id}: {extracted_count} fields extracted (spatial)")
     
     return state
 
